@@ -13,7 +13,7 @@ export default function Sach() {
             <ScrollView>
                 <View style={styles.viewHeader}>
                     <Icon name="search" color="black" size={25} style={{ marginTop: 6, marginLeft: 10, marginBottom: 5 }} />
-                    <TextInput style={styles.input} />
+                    <TextInput placeholder="Tìm kiếm ứng dụng và trò chơi" style={styles.input} />
                     <Icon name="microphone" color="black" size={25} style={{ marginTop: 6, marginRight: 0, marginBottom: 5 }} />
                     <Image source={require('./daonv1.png')}
                         style={{ width: 30, height: 30, marginTop: 5, marginLeft: 10 }}
@@ -375,13 +375,13 @@ const styles = StyleSheet.create({
         marginTop: 5
     },
     input: {
-        borderColor: 'black',
-        borderWidth: 0.05,
         width: '70%',
         height: '100%',
         marginLeft: 10,
         borderRadius: 5,
         marginRight: 5,
+        fontSize: 15,
+        alignItems: 'center'
         // placeholder="Tìm kiếm ứng dụng và trò chơi",
     },
     viewHeader2: {
