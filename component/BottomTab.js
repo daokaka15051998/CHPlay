@@ -35,7 +35,7 @@ export default function App() {
                 />
                 <Tab.Screen name="Ứng Dụng" component={UngDung}
                     options={{
-                        tabBarIcon: ({ color }) => < FontAwesome name="android" size={30} color={color} />
+                        tabBarIcon: ({ color }) => < FontAwesome name="adn" size={30} color={color} />
                     }}
                 />
                 <Tab.Screen name="Phim" component={Phim}

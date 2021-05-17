@@ -41,7 +41,7 @@ export default function UngDung() {
                 <View style={{ backgroundColor: '#BDBDBD', height: 1, width: '100 %' }}></View>
                 <View style={styles.viewDX}>
                     <Text style={styles.textDX}>Đề xuất cho bạn</Text>
-                    <Icon name="angle-right" color="black" size={25} style={{ marginLeft: 210, marginTop: 2 }} />
+                    <Icon name="arrow-right" color="black" size={25} style={{ marginLeft: 210, marginTop: 2 }} />
                 </View>
 
                 <View style={styles.viewImage}>
