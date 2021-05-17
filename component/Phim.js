@@ -250,6 +250,105 @@ export default function Phim() {
                     <Text style={styles.textDX}>Đề xuất cho bạn</Text>
                     <Icon name="angle-right" color="black" size={25} style={{ marginLeft: 220, marginTop: 2 }} />
                 </View>
+
+                <View style={styles.viewImage}>
+                    <ScrollView horizontal={true}>
+
+                        <View style={styles.viewTom}>
+                            <Image
+                                source={{
+                                    uri: 'https://images2.vudu.com/poster2/10617-338',
+                                }}
+                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                            />
+                            <View style={styles.viewImage2} >
+                                <View style={styles.viewText}>
+                                    <Text>Harry Potter and</Text>
+                                    <Text> the sorcerer's St</Text>
+                                    <Text>4.6 * 40.000đ</Text>
+                                </View>
+                            </View>
+                        </View>
+
+                        <View style={styles.viewTom}>
+                            <Image
+                                source={{
+                                    uri: 'http://i.imgur.com/DAnovcL.jpg',
+                                }}
+                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                            />
+                            <View style={styles.viewImage2} >
+                                <View style={styles.viewText}>
+                                    <Text>A Good Day to Die</Text>
+                                    <Text>Hard</Text>
+                                    <Text>4.1* 40.000đ </Text>
+                                </View>
+                            </View>
+                        </View>
+
+
+                        <View style={styles.viewTom}>
+                            <Image
+                                source={{
+                                    uri: 'https://i.pinimg.com/1200x/32/1c/0a/321c0a641597b427e338d137fe093957.jpg',
+                                }}
+                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                            />
+                            <View style={styles.viewImage2} >
+                                <View style={styles.viewText}>
+                                    <Text>The Lego Movie</Text>
+                                    <Text>4.2 * 200.000đ</Text>
+                                </View>
+                            </View>
+                        </View>
+
+                        <View style={styles.viewTom}>
+                            <Image
+                                source={{
+                                    uri: 'https://images-na.ssl-images-amazon.com/images/I/81GRZpBvlJL._SL1500_.jpg',
+                                }}
+                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                            />
+                            <View style={styles.viewImage2} >
+                                <View style={styles.viewText}>
+                                    <Text>Walking with</Text>
+                                    <Text>Dinosaurs the movie</Text>
+                                    <Text>4.2 * 80.000đ</Text>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.viewTom}>
+                            <Image
+                                source={{
+                                    uri: 'https://media-cdn.laodong.vn/Storage/NewsPortal/2019/12/16/772541/Frozen_Two_Ver8.jpg',
+                                }}
+                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                            />
+                            <View style={styles.viewImage2} >
+                                <View style={styles.viewText}>
+                                    <Text>Frozen II</Text>
+                                    <Text>4.2 * 19  0.000đ</Text>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.viewTom}>
+                            <Image
+                                source={{
+                                    uri: 'https://play-lh.googleusercontent.com/3mT5qeUxDc4LmNE6cg3CdyQUpqOlOSZe-_MTMv9dXmYhAX7doGTW6b4_t3FYCGcPMt4',
+                                }}
+                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                            />
+                            <View style={styles.viewImage2} >
+                                <View style={styles.viewText}>
+                                    <Text>The Boss Baby</Text>
+                                    <Text>4.4 * 80.000đ</Text>
+                                </View>
+                            </View>
+                        </View>
+
+                    </ScrollView>
+                </View>
+
             </ScrollView>
         </View>
     )
