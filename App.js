@@ -1,11 +1,11 @@
 import React from 'react';
 import BottomTab from './component/BottomTab'
-// import ScrollableTabView from './component/ScrollLableTabView'
+import TabViewExample from './component/TabView';
+
 const App = () => {
   return (
     <BottomTab />
-    // <ScrollableTabView />
-
+    // <TabViewExample />
   );
 };
 

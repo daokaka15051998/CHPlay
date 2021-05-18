@@ -12,28 +12,34 @@ export default function Sach() {
         <View style={styles.viewSach}>
             <ScrollView>
                 <View style={styles.viewHeader}>
-                    <Icon name="search" color="black" size={25} style={{ marginTop: 6, marginLeft: 10, marginBottom: 5 }} />
-                    <TextInput placeholder="Tìm kiếm ứng dụng và trò chơi" style={styles.input} />
-                    <Icon name="microphone" color="black" size={25} style={{ marginTop: 6, marginRight: 0, marginBottom: 5 }} />
+                    <Icon name="search" color="black" size={25} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
+                    <TextInput placeholder="Tìm kiếm sách" style={styles.input} />
+                    <Icon name="microphone" color="black" size={25} style={{ marginTop: 10, marginRight: 0, marginBottom: 5 }} />
                     <Image source={require('./daonv1.png')}
-                        style={{ width: 30, height: 30, marginTop: 5, marginLeft: 10 }}
+                        style={{ width: 30, height: 30, marginTop: 7, marginLeft: 10 }}
                     />
                 </View>
 
                 <View style={styles.viewHeader2}>
                     <ScrollView horizontal={true}>
-                        <TouchableOpacity
-                        >
+                        <TouchableOpacity>
                             <Text style={styles.textHeader}>Sách điện tử</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity
-                        >
+                        <TouchableOpacity>
                             <Text style={styles.textHeader}>Sách nói</Text>
                         </TouchableOpacity>
-                        <Text style={styles.textHeader}>Thể Loại</Text>
-                        <Text style={styles.textHeader}>Bán chạy nhất</Text>
-                        <Text style={styles.textHeader}>Mới phát hành</Text>
-                        <Text style={styles.textHeader}>Miễn phổ biến</Text>
+                        <TouchableOpacity>
+                            <Text style={styles.textHeader}>Thể Loại</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Text style={styles.textHeader}>Bán chạy nhất</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Text style={styles.textHeader}>Mới phát hành</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Text style={styles.textHeader}>Miễn phổ biến</Text>
+                        </TouchableOpacity>
                     </ScrollView>
                 </View>
 
@@ -57,8 +63,7 @@ export default function Sach() {
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Người vợ theo hợp</Text>
-                                    <Text>đông.Người tình t...</Text>
+                                    <Text>Người vợ theo hợp đông.Người tình t..</Text>
                                     <Text>3.9 * 22.000đ</Text>
                                 </View>
                             </View>
@@ -73,8 +78,7 @@ export default function Sach() {
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Vì tôi là người giúp</Text>
-                                    <Text>việc 2: bí ẩn của ng...</Text>
+                                    <Text>Vì tôi là người giúp việc 2: bí ẩn của ng...</Text>
                                     <Text>4.2* 5.000đ </Text>
                                 </View>
                             </View>
@@ -105,8 +109,7 @@ export default function Sach() {
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Bê Bối Hôn Nhân</Text>
-                                    <Text>Showbiz Mà Cưng</Text>
+                                    <Text>Bê Bối Hôn Nhân Showbiz Mà Cưng</Text>
                                     <Text>4.2 * 22.000đ</Text>
                                 </View>
                             </View>
@@ -114,14 +117,13 @@ export default function Sach() {
                         <View style={styles.viewTom}>
                             <Image
                                 source={{
-                                    uri: 'https://m.media-amazon.com/images/I/51dst9DvLpL.jpg',
+                                    uri: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1498881457l/35560742._SX318_.jpg',
                                 }}
                                 style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Người Vợ Xuyên </Text>
-                                    <Text>Không</Text>
+                                    <Text>Người Vợ Xuyên Không </Text>
                                     <Text>4.2 * 22.000đ</Text>
                                 </View>
                             </View>
@@ -177,8 +179,7 @@ export default function Sach() {
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>The Complete</Text>
-                                    <Text>Sherlock Holm</Text>
+                                    <Text>The Complete Sherlock Holm</Text>
                                     <Text>4.0* 4.387đ</Text>
                                 </View>
                             </View>
@@ -193,8 +194,7 @@ export default function Sach() {
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>The Memoirs of</Text>
-                                    <Text>Sherlock Holm</Text>
+                                    <Text>The Memoirs of Sherlock Holm</Text>
                                     <Text>4.2 * Miễn Phí</Text>
                                 </View>
                             </View>
@@ -210,8 +210,7 @@ export default function Sach() {
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Conan:</Text>
-                                    <Text>Membongkar Ke...</Text>
+                                    <Text>Conan: Membongkar Ke...</Text>
                                     <Text>4.3 * 25.478đ</Text>
                                 </View>
                             </View>
@@ -242,8 +241,8 @@ export default function Sach() {
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Người vợ theo hợp</Text>
-                                    <Text>đông.Người tình t...</Text>
+                                    <Text>Người vợ theo hợp đồng .Người tình t...</Text>
+                                    <Text></Text>
                                     <Text>3.9 * 22.000đ</Text>
                                 </View>
                             </View>
@@ -284,8 +283,7 @@ export default function Sach() {
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Vì tôi là người giúp</Text>
-                                    <Text>việc 2: bí ẩn của ng...</Text>
+                                    <Text>Vì tôi là người giúp việc 2: bí ẩn của ng...</Text>
                                     <Text>4.2* 5.000đ </Text>
                                 </View>
                             </View>
@@ -316,8 +314,7 @@ export default function Sach() {
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Bê Bối Hôn Nhân</Text>
-                                    <Text>Showbiz Mà Cưng</Text>
+                                    <Text>Bê Bối Hôn Nhân Showbiz Mà Cưng</Text>
                                     <Text>4.2 * 22.000đ</Text>
                                 </View>
                             </View>
@@ -325,14 +322,13 @@ export default function Sach() {
                         <View style={styles.viewTom}>
                             <Image
                                 source={{
-                                    uri: 'https://m.media-amazon.com/images/I/51dst9DvLpL.jpg',
+                                    uri: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1498881457l/35560742._SX318_.jpg',
                                 }}
                                 style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Người Vợ Xuyên </Text>
-                                    <Text>Không</Text>
+                                    <Text>Người Vợ Xuyên Không </Text>
                                     <Text>4.2 * 22.000đ</Text>
                                 </View>
                             </View>
@@ -367,12 +363,20 @@ const styles = StyleSheet.create({
     viewHeader: {
         backgroundColor: 'white',
         flexDirection: 'row',
-        height: 40,
+        height: 45,
         borderRadius: 5,
         width: '95%',
         marginLeft: 10,
-        borderWidth: 0.3,
-        marginTop: 5
+        marginTop: 5,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+
+        elevation: 3,
     },
     input: {
         width: '70%',
@@ -406,6 +410,7 @@ const styles = StyleSheet.create({
         marginLeft: 10
     },
     viewTom: {
+        width: 110,
         marginLeft: 10,
         marginTop: 15,
         alignItems: 'center'

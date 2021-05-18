@@ -13,28 +13,34 @@ export default function UngDung() {
             <ScrollView>
 
                 <View style={styles.viewHeader}>
-                    <Icon name="search" color="black" size={25} style={{ marginTop: 6, marginLeft: 10, marginBottom: 5 }} />
+                    <Icon name="search" color="black" size={25} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                     <TextInput placeholder="Tìm kiếm ứng dụng và trò chơi" style={styles.input} />
-                    <Icon name="microphone" color="black" size={25} style={{ marginTop: 6, marginRight: 0, marginBottom: 5 }} />
+                    <Icon name="microphone" color="black" size={25} style={{ marginTop: 10, marginRight: 0, marginBottom: 5 }} />
                     <Image source={require('./daonv1.png')}
-                        style={{ width: 30, height: 30, marginTop: 5, marginLeft: 10 }}
+                        style={{ width: 30, height: 30, marginTop: 7, marginLeft: 10 }}
                     />
                 </View>
 
                 <View style={styles.viewHeader2}>
                     <ScrollView horizontal={true}>
-                        <TouchableOpacity
-                        >
+                        <TouchableOpacity >
                             <Text style={styles.textHeader}>Cho bạn</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity
-                        >
+                        <TouchableOpacity>
                             <Text style={styles.textHeader}>Bảng xếp hạng</Text>
                         </TouchableOpacity>
-                        <Text style={styles.textHeader}>Loại</Text>
-
-                        <Text style={styles.textHeader}>Lựa chọn của biên tập viên</Text>
-                        <Text style={styles.textHeader}>Gia đình</Text>
+                        <TouchableOpacity>
+                            <Text style={styles.textHeader}>Có tính phí</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Text style={styles.textHeader}>Loại</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Text style={styles.textHeader}>Gia đình</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Text style={styles.textHeader}>Lựa chọn của biên tập viên</Text>
+                        </TouchableOpacity>
                     </ScrollView>
                 </View>
 
@@ -54,6 +60,7 @@ export default function UngDung() {
                                 }}
                                 style={{ width: 100, height: 100, borderRadius: 5, marginTop: 10 }}
                             />
+
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
                                     <Text>Microsoft Excel</Text>
@@ -64,12 +71,14 @@ export default function UngDung() {
                         </View>
 
                         <View style={styles.viewExcel}>
-                            <Image
-                                source={{
-                                    uri: 'https://lh3.googleusercontent.com/proxy/m3kFZLUq9-GTnRbQYZqfqXql6MSxaA9qamVoSBxkuGwGVTTZmbzClUwb6lqb85ndzCu1ORU2XWXVHAaEkwUK0gOlfSAmc7sigebYapLGbj1mLF-U9U3Rh_2yZzI71Der6ag7DZ6q',
-                                }}
-                                style={{ width: 100, height: 100, borderRadius: 5, marginTop: 10 }}
-                            />
+                            <View style={styles.viewShadow}>
+                                <Image
+                                    source={{
+                                        uri: 'https://lh3.googleusercontent.com/proxy/GOYfS4GL0DjVxDSq7Aq1ybdtJejAMW93sbID2HFZmS8p8BYmmiGaKw1scx-DrLK7XuxgzoLR6-jUCsdCH0m2OwCC0H-MkKFDUIP5c8sOrCvXrXBmTpKWc6OY7KYByxGsWWJmtsjY',
+                                    }}
+                                    style={{ width: 100, height: 100, borderRadius: 5, marginTop: 10 }}
+                                />
+                            </View>
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
                                     <Text>Microsoft Word</Text>
@@ -209,6 +218,7 @@ export default function UngDung() {
 
 
                         <View style={styles.viewGame2}>
+
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn/2020/04/GameApp/hago-200x200.jpg',
                             }}
@@ -276,13 +286,16 @@ export default function UngDung() {
                 <View style={styles.viewGame}>
                     <ScrollView horizontal={true}>
                         <View style={styles.viewGame2}>
-                            <Image source={{
-                                uri: 'https://sf-tb-sg.ibytedtos.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png',
-                            }}
-                                style={{
-                                    width: 90, height: 90, marginTop: 20, borderRadius: 10,
+                            <View>
+                                <Image source={{
+                                    uri: 'https://sf-tb-sg.ibytedtos.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png',
                                 }}
-                            />
+                                    style={{
+                                        width: 90, height: 90, marginTop: 20, borderRadius: 10,
+                                    }}
+                                />
+                            </View>
+
                             <View style={styles.viewText}>
                                 <Text>Tik Tok Life</Text>
                                 <Text>21 MB</Text>
@@ -293,7 +306,9 @@ export default function UngDung() {
                             <Image source={{
                                 uri: 'https://pbs.twimg.com/profile_images/504660843359776768/Vs_oTkrK_400x400.png',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={{
+                                    width: 90, height: 90, marginTop: 20, borderRadius: 10,
+                                }}
                             />
                             <View style={styles.viewText}>
                                 <Text>Forest: Stay</Text>
@@ -359,12 +374,20 @@ const styles = StyleSheet.create({
     viewHeader: {
         backgroundColor: 'white',
         flexDirection: 'row',
-        height: 40,
+        height: 45,
         borderRadius: 5,
         width: '95%',
         marginLeft: 10,
-        borderWidth: 0.3,
-        marginTop: 5
+        marginTop: 5,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+
+        elevation: 3,
     },
     input: {
         width: '70%',
@@ -374,7 +397,6 @@ const styles = StyleSheet.create({
         marginRight: 5,
         fontSize: 15,
         alignItems: 'center'
-        // placeholder="Tìm kiếm ứng dụng và trò chơi",
     },
     viewHeader2: {
         marginTop: 10,
@@ -399,6 +421,7 @@ const styles = StyleSheet.create({
     },
     viewExcel: {
         marginLeft: 10,
+        width: 100,
     },
     viewImage2: {
         marginTop: 15,
@@ -406,12 +429,27 @@ const styles = StyleSheet.create({
     viewCanva: {
         marginLeft: 10
     },
+    viewText: {
+        marginLeft: 10,
+        marginTop: 10
+    },
     viewTextQc: {
         flexDirection: 'row',
         marginTop: 20,
+        marginLeft: 10,
     },
     viewGame2: {
         marginLeft: 10,
-        alignItems: 'center'
+        alignItems: 'center',
+    },
+    viewShadow: {
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 3,
     }
 })
