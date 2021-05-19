@@ -5,13 +5,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import UngDung from './UngDung';
-import Phim from './Phim';
-import Sach from './Sach';
 import { TabView } from 'react-native-tab-view';
 
 
-export default function TroChoi({ navigation }) {
+export default function Game({ navigation }) {
     return (
         <View style={styles.viewTroChoi}>
             <ScrollView>
@@ -126,14 +123,6 @@ export default function TroChoi({ navigation }) {
                                 }}
                                 style={{
                                     width: 200, height: 120, borderRadius: 5, marginTop: 10, shadowColor: "#000",
-                                    shadowOffset: {
-                                        width: 0,
-                                        height: 1,
-                                    },
-                                    shadowOpacity: 0.22,
-                                    shadowRadius: 2.22,
-
-                                    elevation: 3,
                                 }}
                             />
                             <View style={styles.viewImage2} >

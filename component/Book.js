@@ -7,7 +7,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-export default function Sach() {
+export default function Book() {
     return (
         <View style={styles.viewSach}>
             <ScrollView>

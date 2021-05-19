@@ -5,16 +5,18 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
-// import Icon from 'react-native-vector-icons/AntDesign';
-import UngDung from './UngDung';
-import Phim from './Phim';
-import Sach from './Sach';
-import TroChoi from './TroChoi';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
+// import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Game from './Game';
+import Application from './Application';
+import Movie from './Movie';
+import Book from './Book';
 
-<TroChoi />;
-<UngDung />;
-<Phim />;
-<Sach />
+<Game />;
+<Application />;
+<Movie />;
+<Book />
 
 
 const Tab = createBottomTabNavigator();
@@ -29,24 +31,24 @@ export default function App() {
                 activeTintColor: 'green',
                 inactiveTintColor: 'black'
             }} >
-                <Tab.Screen name="Trò Chơi" component={TroChoi}
+                <Tab.Screen name="Trò Chơi" component={Game}
                     options={{
-                        tabBarIcon: ({ color }) => < FontAwesome name="gamepad" size={25} color={color} />
+                        tabBarIcon: ({ color }) => < Entypo name="game-controller" size={25} color={color} />
                     }}
                 />
-                <Tab.Screen name="Ứng Dụng" component={UngDung}
+                <Tab.Screen name="Ứng Dụng" component={Application}
                     options={{
-                        tabBarIcon: ({ color }) => < FontAwesome name="heart" size={25} color={color} />
+                        tabBarIcon: ({ color }) => < AntDesign name="appstore1" size={25} color={color} />
                     }}
                 />
-                <Tab.Screen name="Phim" component={Phim}
+                <Tab.Screen name="Phim" component={Movie}
                     options={{
                         tabBarIcon: ({ color }) => < FontAwesome name="film" size={25} color={color} />
                     }}
                 />
-                <Tab.Screen name="Sách" component={Sach}
+                <Tab.Screen name="Sách" component={Book}
                     options={{
-                        tabBarIcon: ({ color }) => < FontAwesome name="book" size={25} color={color} />
+                        tabBarIcon: ({ color }) => < AntDesign name="book" size={25} color={color} />
                     }}
                 />
             </Tab.Navigator>

@@ -7,7 +7,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-export default function Phim() {
+export default function Movie() {
     return (
         <View style={styles.viewPhim}>
             <ScrollView>
