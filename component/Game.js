@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { TabView } from 'react-native-tab-view';
+import TabViewExample from './TabView';
 
 
 export default function Game({ navigation }) {
@@ -16,32 +17,11 @@ export default function Game({ navigation }) {
                     <Icon name="search" color="black" size={25} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                     <TextInput placeholder="Tìm kiếm ứng dụng và trò chơi" style={styles.input} />
                     <Icon name="microphone" color="black" size={25} style={{ marginTop: 10, marginRight: 0, marginBottom: 5 }} />
-                    <Image source={require('./daonv1.png')}
+                    <Image source={require('../assets/image/daonv1.png')}
                         style={{ width: 30, height: 30, marginTop: 7, marginLeft: 10 }}
                     />
                 </View>
-                <View style={styles.viewHeader2}>
-                    <ScrollView horizontal={true}>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Cho bạn</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Bảng xếp hạng</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Có tính phí</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Loại</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Gia đình</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Lựa chọn của biên tập viên</Text>
-                        </TouchableOpacity>
-                    </ScrollView>
-                </View>
+                <TabViewExample />
                 <View style={{ backgroundColor: '#BDBDBD', height: 1, width: '100 %' }}></View>
                 <View style={styles.viewDX}>
                     <Text style={styles.textDX}>Khám phá các trò chơi được đề xuất...</Text>

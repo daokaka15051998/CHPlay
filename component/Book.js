@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import TabViewExample from './TabView';
 
 
 export default function Book() {
@@ -15,33 +16,11 @@ export default function Book() {
                     <Icon name="search" color="black" size={25} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                     <TextInput placeholder="Tìm kiếm sách" style={styles.input} />
                     <Icon name="microphone" color="black" size={25} style={{ marginTop: 10, marginRight: 0, marginBottom: 5 }} />
-                    <Image source={require('./daonv1.png')}
+                    <Image source={require('../assets/image/daonv1.png')}
                         style={{ width: 30, height: 30, marginTop: 7, marginLeft: 10 }}
                     />
                 </View>
-
-                <View style={styles.viewHeader2}>
-                    <ScrollView horizontal={true}>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Sách điện tử</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Sách nói</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Thể Loại</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Bán chạy nhất</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Mới phát hành</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Miễn phổ biến</Text>
-                        </TouchableOpacity>
-                    </ScrollView>
-                </View>
+                <TabViewExample />
 
                 <View style={{ backgroundColor: '#BDBDBD', height: 1, width: '100 %' }}></View>
 

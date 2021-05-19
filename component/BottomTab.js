@@ -33,22 +33,23 @@ export default function App() {
             }} >
                 <Tab.Screen name="Trò Chơi" component={Game}
                     options={{
-                        tabBarIcon: ({ color }) => < Entypo name="game-controller" size={25} color={color} />
+                        tabBarIcon: () => < Entypo name="game-controller" size={20} color='#6E6E6E' />
                     }}
                 />
                 <Tab.Screen name="Ứng Dụng" component={Application}
                     options={{
-                        tabBarIcon: ({ color }) => < AntDesign name="appstore1" size={25} color={color} />
+                        tabBarIcon: () => < AntDesign name="appstore1" size={20} color='#6E6E6E' />
                     }}
                 />
                 <Tab.Screen name="Phim" component={Movie}
                     options={{
-                        tabBarIcon: ({ color }) => < FontAwesome name="film" size={25} color={color} />
+                        tabBarIcon: () => < FontAwesome name="film" size={20} color='#6E6E6E' />
                     }}
                 />
                 <Tab.Screen name="Sách" component={Book}
+
                     options={{
-                        tabBarIcon: ({ color }) => < AntDesign name="book" size={25} color={color} />
+                        tabBarIcon: () => < AntDesign name="book" size={20} color='#6E6E6E' />
                     }}
                 />
             </Tab.Navigator>

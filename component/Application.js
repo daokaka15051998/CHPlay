@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import TabViewExample from './TabView';
 
 
 export default function Application() {
@@ -16,33 +17,11 @@ export default function Application() {
                     <Icon name="search" color="black" size={25} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                     <TextInput placeholder="Tìm kiếm ứng dụng và trò chơi" style={styles.input} />
                     <Icon name="microphone" color="black" size={25} style={{ marginTop: 10, marginRight: 0, marginBottom: 5 }} />
-                    <Image source={require('./daonv1.png')}
+                    <Image source={require('../assets/image/daonv1.png')}
                         style={{ width: 30, height: 30, marginTop: 7, marginLeft: 10 }}
                     />
                 </View>
-
-                <View style={styles.viewHeader2}>
-                    <ScrollView horizontal={true}>
-                        <TouchableOpacity >
-                            <Text style={styles.textHeader}>Cho bạn</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Bảng xếp hạng</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Có tính phí</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Loại</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Gia đình</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <Text style={styles.textHeader}>Lựa chọn của biên tập viên</Text>
-                        </TouchableOpacity>
-                    </ScrollView>
-                </View>
+                <TabViewExample />
 
                 <View style={{ backgroundColor: '#BDBDBD', height: 1, width: '100 %' }}></View>
                 <View style={styles.viewDX}>
@@ -74,7 +53,7 @@ export default function Application() {
                             <View style={styles.viewShadow}>
                                 <Image
                                     source={{
-                                        uri: 'https://lh3.googleusercontent.com/proxy/GOYfS4GL0DjVxDSq7Aq1ybdtJejAMW93sbID2HFZmS8p8BYmmiGaKw1scx-DrLK7XuxgzoLR6-jUCsdCH0m2OwCC0H-MkKFDUIP5c8sOrCvXrXBmTpKWc6OY7KYByxGsWWJmtsjY',
+                                        uri: 'https://cdn.tgdd.vn/GameApp/3/224785/Screentshots/lingodeer-hoc-tieng-anh-trung-han-nhat-logo-19-06-2020.png',
                                     }}
                                     style={{ width: 100, height: 100, borderRadius: 5, marginTop: 10 }}
                                 />
@@ -372,6 +351,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     viewHeader: {
+        paddingBottom: 10,
         backgroundColor: 'white',
         flexDirection: 'row',
         height: 45,
