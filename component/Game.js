@@ -6,26 +6,16 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { TabView } from 'react-native-tab-view';
-import TabViewExample from './TabView';
 
 
-export default function Game({ navigation }) {
+export default function Game() {
     return (
         <View style={styles.viewTroChoi}>
             <ScrollView>
-                <View style={styles.viewHeader}>
-                    <Icon name="search" color="black" size={25} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
-                    <TextInput placeholder="Tìm kiếm ứng dụng và trò chơi" style={styles.input} />
-                    <Icon name="microphone" color="black" size={25} style={{ marginTop: 10, marginRight: 0, marginBottom: 5 }} />
-                    <Image source={require('../assets/image/daonv1.png')}
-                        style={{ width: 30, height: 30, marginTop: 7, marginLeft: 10 }}
-                    />
-                </View>
-                <TabViewExample />
                 <View style={{ backgroundColor: '#BDBDBD', height: 1, width: '100 %' }}></View>
                 <View style={styles.viewDX}>
                     <Text style={styles.textDX}>Khám phá các trò chơi được đề xuất...</Text>
-                    <Icon name="arrow-right" color="black" size={25} style={{ marginLeft: 10, marginTop: 2 }} />
+                    <Icon name="arrow-right" color="#6E6E6E" size={25} style={{ marginLeft: 10, marginTop: 2 }} />
                 </View>
 
                 <View style={styles.viewImage}>
@@ -393,15 +383,15 @@ const styles = StyleSheet.create({
         width: '95%',
         marginLeft: 10,
         marginTop: 5,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.22,
-        shadowRadius: 2.22,
+        // shadowColor: "#000",
+        // shadowOffset: {
+        //     width: 0,
+        //     height: 1,
+        // },
+        // shadowOpacity: 0.22,
+        // shadowRadius: 2.22,
 
-        elevation: 3,
+        // elevation: 3,
     },
     input: {
         width: '70%',

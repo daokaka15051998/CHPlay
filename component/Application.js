@@ -13,20 +13,19 @@ export default function Application() {
         <View style={styles.viewUngDung}>
             <ScrollView>
 
-                <View style={styles.viewHeader}>
+                {/* <View style={styles.viewHeader}>
                     <Icon name="search" color="black" size={25} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                     <TextInput placeholder="Tìm kiếm ứng dụng và trò chơi" style={styles.input} />
                     <Icon name="microphone" color="black" size={25} style={{ marginTop: 10, marginRight: 0, marginBottom: 5 }} />
                     <Image source={require('../assets/image/daonv1.png')}
                         style={{ width: 30, height: 30, marginTop: 7, marginLeft: 10 }}
                     />
-                </View>
-                <TabViewExample />
+                </View> */}
 
                 <View style={{ backgroundColor: '#BDBDBD', height: 1, width: '100 %' }}></View>
                 <View style={styles.viewDX}>
                     <Text style={styles.textDX}>Đề xuất cho bạn</Text>
-                    <Icon name="arrow-right" color="black" size={25} style={{ marginLeft: 210, marginTop: 2 }} />
+                    <Icon name="arrow-right" color="#6E6E6E" size={25} style={{ marginLeft: 210, marginTop: 2 }} />
                 </View>
 
                 <View style={styles.viewImage}>

@@ -1,28 +1,23 @@
 import { BottomTabBar } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
-import { View, useWindowDimensions } from 'react-native';
-import { TabView, SceneMap } from 'react-native-tab-view';
+import { View, useWindowDimensions, Text } from 'react-native';
+import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
+import Application from './Application';
 import Game from './Game';
+import Movie from './Movie';
+import Book from './Book';
+import ViewHeader from './ViewHeader';
+import { ScrollView } from 'react-native-gesture-handler';
+import { color } from 'react-native-reanimated';
+import Charts from './Charts';
 
-const FirstRoute = () => (
-  <View style={{ height: 0, backgroundColor: '#673ab7' }} />
-);
-const SecondRoute = () => (
-  <View style={{ height: 0, backgroundColor: '#673ab7' }} />
-);
-const DetailRoute = () => (
-  <View style={{ height: 0, backgroundColor: 'pink' }} />
-);
-const Family = () => (
-  <View style={{ height: 0, backgroundColor: 'black' }} />
-);
 
-const renderScene = SceneMap({
-  first: FirstRoute,
-  second: SecondRoute,
-  detail: DetailRoute,
-  family: Family,
-});
+// const renderScene = SceneMap({
+//   first: Game,
+//   second: Application,
+//   detail: Movie,
+//   family: Book,
+// });
 
 export default function TabViewExample() {
 
@@ -35,14 +30,62 @@ export default function TabViewExample() {
     { key: 'second', title: 'Bảng Xếp Hạng' },
     { key: 'detail', title: 'Có Tính Phí' },
     { key: 'family', title: 'Gia Đình' },
+    { key: 'bientap', title: 'Lựa Chọn Biên Tập Viên' },
   ]);
 
-  return (
-    <TabView
+  const renderTabBar = (props) => {
+    return <TabBar
+      {...props}
+
       navigationState={{ index, routes }}
-      renderScene={renderScene}
       onIndexChange={setIndex}
-      initialLayout={{ width: layout.width }}
+      scrollEnabled
+      tabStyle={{
+        backgroundColor: 'white',
+        height: 60,
+        width: 'auto',
+
+      }}
+      getLabelText={({ route }) => route.title}
+      renderLabel={({ route, focused, color }) => (
+        <Text style={{ color: 'black', flexDirection: 'row-reverse', marginLeft: 25 }}>
+          {route.title}
+        </Text>
+      )}
     />
+  }
+
+  // const renderScene = ({ routes, jumTo, }) => {
+  //   switch (routes.key) {
+  //     case 'first':
+  //       return <Game jumTo={jumTo} />;
+  //     case 'second':
+  //       return <Application jumTo={jumTo} />;
+  //     case 'detail':
+  //       return <Movie jumTo={jumTo} />;
+  //     case 'family':
+  //       return <Book jumTo={jumTo} />;
+  //   }
+  // }
+
+  return (
+    <View flex={1} back>
+      <ViewHeader />
+      <TabView
+
+        renderTabBar={renderTabBar}
+        navigationState={{ index, routes }}
+        onIndexChange={setIndex}
+        renderScene={SceneMap({
+          first: Game,
+          second: Charts,
+          detail: Movie,
+          family: Book,
+          bientap: Game,
+        })}
+      />
+
+    </View>
+
   );
 }
