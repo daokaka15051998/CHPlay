@@ -81,7 +81,7 @@ export default function TabViewExample() {
           second: Charts,
           detail: Movie,
           family: Book,
-          bientap: Game,
+          bientap: Application,
         })}
       />
 

@@ -46,7 +46,7 @@ export default function Charts(navigation) {
                     <View style={styles.view2}>
 
                         <View style={styles.viewChu}>
-                            <Text style={{ marginLeft: 15 }}>1</Text>
+                            <Text style={{ marginLeft: 15 }}>2</Text>
                             <AntDesign name="linechart" color="#6E6E6E" size={20} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                         </View>
 
@@ -68,7 +68,7 @@ export default function Charts(navigation) {
                     <View style={styles.view2}>
 
                         <View style={styles.viewChu}>
-                            <Text style={{ marginLeft: 15 }}>1</Text>
+                            <Text style={{ marginLeft: 15 }}>3</Text>
                             <AntDesign name="linechart" color="#6E6E6E" size={20} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                         </View>
 
@@ -93,7 +93,7 @@ export default function Charts(navigation) {
                     <View style={styles.view2}>
 
                         <View style={styles.viewChu}>
-                            <Text style={{ marginLeft: 15 }}>1</Text>
+                            <Text style={{ marginLeft: 15 }}>4</Text>
                             <AntDesign name="linechart" color="#6E6E6E" size={20} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                         </View>
 
@@ -117,7 +117,7 @@ export default function Charts(navigation) {
                     <View style={styles.view2}>
 
                         <View style={styles.viewChu}>
-                            <Text style={{ marginLeft: 15 }}>1</Text>
+                            <Text style={{ marginLeft: 15 }}>5</Text>
                             <AntDesign name="linechart" color="#6E6E6E" size={20} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                         </View>
 
@@ -141,7 +141,7 @@ export default function Charts(navigation) {
                     <View style={styles.view2}>
 
                         <View style={styles.viewChu}>
-                            <Text style={{ marginLeft: 15 }}>1</Text>
+                            <Text style={{ marginLeft: 15 }}>6</Text>
                             <AntDesign name="linechart" color="#6E6E6E" size={20} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                         </View>
 
@@ -165,7 +165,7 @@ export default function Charts(navigation) {
                     <View style={styles.view2}>
 
                         <View style={styles.viewChu}>
-                            <Text style={{ marginLeft: 15 }}>1</Text>
+                            <Text style={{ marginLeft: 15 }}>7</Text>
                             <AntDesign name="linechart" color="#6E6E6E" size={20} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                         </View>
 
@@ -188,7 +188,7 @@ export default function Charts(navigation) {
                     <View style={styles.view2}>
 
                         <View style={styles.viewChu}>
-                            <Text style={{ marginLeft: 15 }}>1</Text>
+                            <Text style={{ marginLeft: 15 }}>8</Text>
                             <AntDesign name="linechart" color="#6E6E6E" size={20} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                         </View>
 
@@ -213,7 +213,7 @@ export default function Charts(navigation) {
                     <View style={styles.view2}>
 
                         <View style={styles.viewChu}>
-                            <Text style={{ marginLeft: 15 }}>1</Text>
+                            <Text style={{ marginLeft: 15 }}>9</Text>
                             <AntDesign name="linechart" color="#6E6E6E" size={20} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
                         </View>
 
