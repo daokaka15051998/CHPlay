@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TextInput, Image, ScrollView, TouchableOpacity, Modal, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TextInput, Image, ScrollView, TouchableOpacity, Modal, Pressable, Button } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -8,8 +8,15 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { TabView } from 'react-native-tab-view';
 import TabViewExample from './TabView';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Charts from './Charts';
+import { color } from 'react-native-reanimated';
 
-export default function ModalStyle() {
+
+export default function ModalStyle(navigation) {
     const [modalVisible, setModalVisible] = React.useState(false);
 
     const [modalVisible1, setModalVisible1] = React.useState(false);
@@ -53,6 +60,7 @@ export default function ModalStyle() {
             >
                 <View style={styles.centeredView1}>
                     <View style={styles.modalView1}>
+
                         <Text style={styles.modalText}>Danh mục</Text>
 
                         <Pressable
@@ -62,29 +70,61 @@ export default function ModalStyle() {
                             <ScrollView>
                                 <Text style={styles.textStyle}>Tất cả các danh mục</Text>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Câu đố</Text>
+
+                                <View style={styles.viewDM}>
+                                    <AntDesign name="CodeSandbox" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Câu đố</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Chiến thuật</Text>
+                                <View style={styles.viewDM}>
+                                    <Entypo name="dropbox" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Chiến thuật</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Dạng bảng</Text>
+                                <View style={styles.viewDM}>
+                                    <FontAwesome5 name="chess" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Dạng bảng</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Đố vui</Text>
+                                <View style={styles.viewDM}>
+                                    <FontAwesome5 name="hourglass-start" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Đố Vui</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Đua xe</Text>
+                                <View style={styles.viewDM}>
+                                    <AntDesign name="CodeSandbox" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Đua xe</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Giáo dục</Text>
+                                <View style={styles.viewDM}>
+                                    <AntDesign name="book" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Giáo dục</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Hành động</Text>
+                                <View style={styles.viewDM}>
+                                    <MaterialCommunityIcons name="helicopter" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Hành động</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Mô phỏng</Text>
+                                <View style={styles.viewDM}>
+                                    <AntDesign name="CodeSandbox" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Mô phỏng</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Nhạc</Text>
+                                <View style={styles.viewDM}>
+                                    <Entypo name="music" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Nhạc</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Nhập vai</Text>
+                                <View style={styles.viewDM}>
+                                    <Entypo name="music" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Thẻ bài</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Phưu lưu</Text>
-                                <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                                <Text style={styles.textStyle}>Sòng bạc</Text>
+                                <View style={styles.viewDM}>
+                                    <MaterialIcons name="sports-soccer" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Thể thao</Text>
+                                </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
                             </ScrollView>
                         </Pressable>
@@ -203,7 +243,8 @@ const styles = StyleSheet.create({
     textStyle: {
         color: "#6E6E6E",
         fontSize: 20,
-        marginTop: 0
+        marginTop: 13,
+
 
     },
     textStyle1: {
@@ -226,9 +267,18 @@ const styles = StyleSheet.create({
     modalText: {
         marginBottom: 20,
         fontSize: 22,
-        marginRight: 95
+        marginRight: 95,
+
     },
     viewNgang: {
         flexDirection: 'row'
+    },
+    viewDM: {
+        flexDirection: 'row',
+        marginLeft: 10
+    },
+    iconDm: {
+        marginTop: 16,
+        marginRight: 10
     }
 });
