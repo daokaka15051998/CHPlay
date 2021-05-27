@@ -7,10 +7,11 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { TabView } from 'react-native-tab-view';
 import TabViewExample from './TabView';
+import TabViewExample1 from './TabView1';
 
 export default function Application1() {
     return (
-        <TabViewExample />
+        <TabViewExample1 />
     );
 
 }

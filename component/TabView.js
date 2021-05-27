@@ -7,9 +7,10 @@ import Game from './Game';
 import Movie from './Movie';
 import Book from './Book';
 import ViewHeader from './ViewHeader';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { color } from 'react-native-reanimated';
 import Charts from './Charts';
+import Detail from './Detail';
 
 
 // const renderScene = SceneMap({
@@ -36,7 +37,6 @@ export default function TabViewExample() {
   const renderTabBar = (props) => {
     return <TabBar
       {...props}
-
       navigationState={{ index, routes }}
       onIndexChange={setIndex}
       scrollEnabled
@@ -48,9 +48,11 @@ export default function TabViewExample() {
       }}
       getLabelText={({ route }) => route.title}
       renderLabel={({ route, focused, color }) => (
-        <Text style={{ color: 'black', flexDirection: 'row-reverse', marginLeft: 25 }}>
-          {route.title}
-        </Text>
+        <TouchableOpacity>
+          <Text style={{ color: 'black', flexDirection: 'row-reverse', marginLeft: 25 }}>
+            {route.title}
+          </Text>
+        </TouchableOpacity>
       )}
     />
   }
@@ -72,7 +74,6 @@ export default function TabViewExample() {
     <View flex={1} back>
       <ViewHeader />
       <TabView
-
         renderTabBar={renderTabBar}
         navigationState={{ index, routes }}
         onIndexChange={setIndex}

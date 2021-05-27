@@ -6,6 +6,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { TabView } from 'react-native-tab-view';
+import { Dimensions } from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 
 
 export default function Game() {
@@ -26,13 +31,13 @@ export default function Game() {
                                 source={{
                                     uri: 'https://cdn.tgdd.vn/GameApp/3/221132/Screentshots/8-ball-pool-tro-choi-bida-dinh-cao-noi-the-hien-ky-nang-cua-ban-01-05-2021-0.png',
                                 }}
-                                style={{ width: 200, height: 120, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageGame}
                             />
                             <View style={styles.viewImage2} >
                                 <Image source={{
                                     uri: 'https://cdn.tgdd.vn/GameApp/3/233131/Screentshots/mu-vuot-thoi-dai-funtap-233131-logo-30-12-2020.png',
                                 }}
-                                    style={{ width: 40, height: 40, marginTop: 20, borderRadius: 10 }}
+                                    style={{ width: windowWidth * 0.11, height: windowWidth * 0.11, marginTop: 20, borderRadius: 10 }}
                                 />
                                 <View style={styles.viewText}>
                                     <Text>8 Ball Pool</Text>
@@ -47,13 +52,13 @@ export default function Game() {
                                 source={{
                                     uri: 'https://gamek.mediacdn.vn/zoom/780_295/133514250583805952/2020/11/25/lor-banner-16062792690151811515922.jpg',
                                 }}
-                                style={{ width: 200, height: 120, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageGame}
                             />
                             <View style={styles.viewImage2} >
                                 <Image source={{
                                     uri: 'https://i.ytimg.com/vi/rPrgrwNARvE/maxresdefault.jpg',
                                 }}
-                                    style={{ width: 40, height: 40, marginTop: 20, borderRadius: 10 }}
+                                    style={{ width: windowWidth * 0.11, height: windowWidth * 0.11, marginTop: 20, borderRadius: 10 }}
                                 />
                                 <View style={styles.viewText}>
                                     <Text>Huyền Thoại Runeterra</Text>
@@ -69,13 +74,13 @@ export default function Game() {
                                 source={{
                                     uri: 'https://play-lh.googleusercontent.com/KOJrBveCPD9tAPwB8bc56E_DujYLulkr6uWV4FRR8khMheYclRb_JGuGAHSJE6rHzdo',
                                 }}
-                                style={{ width: 200, height: 120, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageGame}
                             />
                             <View style={styles.viewImage2} >
                                 <Image source={{
                                     uri: 'https://play-lh.googleusercontent.com/KOJrBveCPD9tAPwB8bc56E_DujYLulkr6uWV4FRR8khMheYclRb_JGuGAHSJE6rHzdo',
                                 }}
-                                    style={{ width: 40, height: 40, marginTop: 20, borderRadius: 10 }}
+                                    style={{ width: windowWidth * 0.11, height: windowWidth * 0.11, borderRadius: 10 }}
                                 />
                                 <View style={styles.viewText}>
                                     <Text>Võ Lâm Truyền Kỳ 1</Text>
@@ -91,15 +96,13 @@ export default function Game() {
                                 source={{
                                     uri: 'https://res09.bignox.com/appcenter/vn/2020/10/5-27.jpg',
                                 }}
-                                style={{
-                                    width: 200, height: 120, borderRadius: 5, marginTop: 10, shadowColor: "#000",
-                                }}
+                                style={styles.imageGame}
                             />
                             <View style={styles.viewImage2} >
                                 <Image source={{
                                     uri: 'https://res09.bignox.com/appcenter/vn/2020/10/5-27.jpg',
                                 }}
-                                    style={{ width: 40, height: 40, marginTop: 20, borderRadius: 10 }}
+                                    style={{ width: windowWidth * 0.11, height: windowWidth * 0.11, borderRadius: 10 }}
                                 />
                                 <View style={styles.viewText}>
                                     <Text>Thợ Săn Ma 3D</Text>
@@ -113,13 +116,13 @@ export default function Game() {
                                 source={{
                                     uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1446890/capsule_616x353.jpg?t=1618732004',
                                 }}
-                                style={{ width: 200, height: 120, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageGame}
                             />
                             <View style={styles.viewImage2} >
                                 <Image source={{
                                     uri: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1446890/capsule_616x353.jpg?t=1618732004',
                                 }}
-                                    style={{ width: 40, height: 40, marginTop: 20, borderRadius: 10 }}
+                                    style={{ width: windowWidth * 0.11, height: windowWidth * 0.11, borderRadius: 10 }}
                                 />
                                 <View style={styles.viewText}>
                                     <Text>ShaDow Fight</Text>
@@ -133,13 +136,13 @@ export default function Game() {
                                 source={{
                                     uri: 'https://res09.bignox.com/appcenter/vn/2020/10/5-27.jpg',
                                 }}
-                                style={{ width: 200, height: 120, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageGame}
                             />
                             <View style={styles.viewImage2} >
                                 <Image source={{
                                     uri: 'https://res09.bignox.com/appcenter/vn/2020/10/5-27.jpg',
                                 }}
-                                    style={{ width: 40, height: 40, marginTop: 20, borderRadius: 10 }}
+                                    style={{ width: windowWidth * 0.11, height: windowWidth * 0.11, borderRadius: 10 }}
                                 />
                                 <View style={styles.viewText}>
                                     <Text>Thợ Săn Ma 3D</Text>
@@ -159,11 +162,12 @@ export default function Game() {
 
                 <View style={styles.viewGame}>
                     <ScrollView horizontal={true}>
+
                         <View style={styles.viewGame2}>
                             <Image source={{
                                 uri: 'https://play-lh.googleusercontent.com/KOJrBveCPD9tAPwB8bc56E_DujYLulkr6uWV4FRR8khMheYclRb_JGuGAHSJE6rHzdo',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame2}
                             />
                             <View style={styles.viewText}>
                                 <Text>Võ Lâm Truyền Kỳ 1 Mobie</Text>
@@ -175,7 +179,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://play.2game.vn/static/attachment/game/20210409/1617940996298609.jpg',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame2}
                             />
                             <View style={styles.viewText}>
                                 <Text>Forsaken Word:Thần Ma Đao</Text>
@@ -187,7 +191,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://upload.afkmobi.com/photos/afkmobi-com/2021/04/afkmobi_logo_tan_giang_ho_truyen_ky_mobile_ban_hd_chuan.png',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame2}
                             />
                             <View style={styles.viewText}>
                                 <Text>Võ Lâm Truyền Kỳ 1 Mobie</Text>
@@ -200,7 +204,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn/GameApp/3/233131/Screentshots/mu-vuot-thoi-dai-funtap-233131-logo-30-12-2020.png',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame2}
                             />
                             <View style={styles.viewText}>
                                 <Text>MU:Vượt Thời Đại- Funtap</Text>
@@ -212,7 +216,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn//GameApp/1346204//3-cach-nap-the-luyen-yeu-ky-nhanh-chong-don-gian-thumb-800x450.jpg',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame2}
                             />
                             <View style={styles.viewText}>
                                 <Text>Luyện Yêu Ký Games</Text>
@@ -224,7 +228,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn/GameApp/3/220297/Screentshots/candy-crush-soda-saga-tro-choi-keo-ngot-logo-19-05-2020.png',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame2}
                             />
                             <View style={styles.viewText2}>
                                 <Text>Candy Crush Soda Saga</Text>
@@ -237,7 +241,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.game.tv/game-tv-content/images_2/mobile/game_banner/03989854ff11b7dd541caf55f3fb1ae3/en/03989854ff11b7dd541caf55f3fb1ae3.jpg',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame2}
                             />
                             <View style={styles.viewText}>
                                 <Text>Summpners War Lost Centuria</Text>
@@ -258,7 +262,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn/GameApp/3/220297/Screentshots/candy-crush-soda-saga-tro-choi-keo-ngot-logo-19-05-2020.png',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame3}
                             />
                             <View style={styles.viewText2}>
                                 <Text>Candy Crush Soda Saga</Text>
@@ -271,7 +275,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.game.tv/game-tv-content/images_2/mobile/game_banner/03989854ff11b7dd541caf55f3fb1ae3/en/03989854ff11b7dd541caf55f3fb1ae3.jpg',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame3}
                             />
                             <View style={styles.viewText}>
                                 <Text>Summpners War Lost Centuria</Text>
@@ -283,7 +287,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://upload.afkmobi.com/photos/afkmobi-com/2021/04/afkmobi_logo_tan_giang_ho_truyen_ky_mobile_ban_hd_chuan.png',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame3}
                             />
                             <View style={styles.viewText}>
                                 <Text>Võ Lâm Truyền Kỳ 1 Mobie</Text>
@@ -296,7 +300,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn//GameApp/1346204//3-cach-nap-the-luyen-yeu-ky-nhanh-chong-don-gian-thumb-800x450.jpg',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame3}
                             />
                             <View style={styles.viewText}>
                                 <Text>Luyện Yêu Ký Games</Text>
@@ -307,7 +311,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn/GameApp/3/233131/Screentshots/mu-vuot-thoi-dai-funtap-233131-logo-30-12-2020.png',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame3}
                             />
                             <View style={styles.viewText}>
                                 <Text>MU:Vượt Thời Đại- Funtap</Text>
@@ -319,7 +323,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn//GameApp/1346204//3-cach-nap-the-luyen-yeu-ky-nhanh-chong-don-gian-thumb-800x450.jpg',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame3}
                             />
                             <View style={styles.viewText}>
                                 <Text>Luyện Yêu Ký Games</Text>
@@ -330,7 +334,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn/GameApp/3/233131/Screentshots/mu-vuot-thoi-dai-funtap-233131-logo-30-12-2020.png',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame3}
                             />
                             <View style={styles.viewText}>
                                 <Text>MU:Vượt Thời Đại- Funtap</Text>
@@ -341,7 +345,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn//GameApp/1346204//3-cach-nap-the-luyen-yeu-ky-nhanh-chong-don-gian-thumb-800x450.jpg',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame3}
                             />
                             <View style={styles.viewText}>
                                 <Text>Luyện Yêu Ký Games</Text>
@@ -352,7 +356,7 @@ export default function Game() {
                             <Image source={{
                                 uri: 'https://cdn.tgdd.vn/GameApp/3/233131/Screentshots/mu-vuot-thoi-dai-funtap-233131-logo-30-12-2020.png',
                             }}
-                                style={{ width: 90, height: 90, marginTop: 20, borderRadius: 10 }}
+                                style={styles.imageGame3}
                             />
                             <View style={styles.viewText}>
                                 <Text>MU:Vượt Thời Đại- Funtap</Text>
@@ -373,25 +377,6 @@ const styles = StyleSheet.create({
     viewTroChoi: {
         flex: 1,
         backgroundColor: 'white'
-    },
-
-    viewHeader: {
-        backgroundColor: 'white',
-        flexDirection: 'row',
-        height: 45,
-        borderRadius: 5,
-        width: '95%',
-        marginLeft: 10,
-        marginTop: 5,
-        // shadowColor: "#000",
-        // shadowOffset: {
-        //     width: 0,
-        //     height: 1,
-        // },
-        // shadowOpacity: 0.22,
-        // shadowRadius: 2.22,
-
-        // elevation: 3,
     },
     input: {
         width: '70%',
@@ -420,12 +405,12 @@ const styles = StyleSheet.create({
     },
 
     textDX: {
-        fontSize: 20,
+        fontSize: windowWidth * 0.05,
         marginLeft: 10
     },
     viewImage: {
         backgroundColor: 'white',
-        height: 200,
+        height: windowHeight * 0.34,
         marginLeft: 10,
     },
     viewImage2: {
@@ -439,10 +424,11 @@ const styles = StyleSheet.create({
     },
     viewBia: {
         marginLeft: 5,
-
+        width: windowWidth * 0.5,
     },
     viewRuneterra: {
-        marginLeft: 10
+        marginLeft: 20,
+        width: windowWidth * 0.5,
     },
     viewTextQc: {
         flexDirection: 'row',
@@ -450,11 +436,34 @@ const styles = StyleSheet.create({
         marginLeft: 10,
     },
     viewGame2: {
-        width: 100,
+        width: windowWidth * 0.27,
         marginLeft: 10,
     },
     viewText2: {
         paddingTop: 10,
         marginLeft: 10
     }
+    ,
+    imageGame: {
+        width: '100%',
+        height: windowWidth * 0.3,
+        borderRadius: 5,
+        marginTop: 10,
+        resizeMode: 'stretch'
+    },
+    imageGame2: {
+        width: windowWidth * 0.24,
+        height: windowWidth * 0.24,
+        marginTop: 20,
+        borderRadius: 10,
+        resizeMode: 'stretch'
+    },
+    imageGame3: {
+        width: windowWidth * 0.24,
+        height: windowWidth * 0.24,
+        marginTop: 20,
+        borderRadius: 10,
+        resizeMode: 'stretch'
+    }
+
 })

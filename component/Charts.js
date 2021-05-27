@@ -10,6 +10,11 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import ModalStyle from './ModalStyle';
 import Application from './Application';
 
+
+import { Dimensions } from 'react-native';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 export default function Charts(navigation) {
     return (
 
@@ -31,7 +36,7 @@ export default function Charts(navigation) {
                             source={{
                                 uri: 'https://play-lh.googleusercontent.com/TgGhKHzYTMoeoI4E4hby6CB8t_SNT0JYSxBKvccfdxVwFZbI8VDBbrl2SHgNaSH5hTnw',
                             }}
-                            style={{ width: 60, height: 60, borderRadius: 5, marginTop: 10, marginLeft: 15 }}
+                            style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
                             <Text>CatWalk Beauty</Text>
@@ -54,7 +59,7 @@ export default function Charts(navigation) {
                             source={{
                                 uri: 'https://is4-ssl.mzstatic.com/image/thumb/Purple124/v4/2c/0c/5c/2c0c5cb7-e988-2c66-9849-2f568611ae4a/source/200x200bb.jpg',
                             }}
-                            style={{ width: 60, height: 60, borderRadius: 5, marginTop: 10, marginLeft: 15 }}
+                            style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
                             <Text>Makeover Run</Text>
@@ -76,7 +81,7 @@ export default function Charts(navigation) {
                             source={{
                                 uri: 'https://www.gamehayapk.com/wp-content/uploads/2021/03/bridge-race.png',
                             }}
-                            style={{ width: 50, height: 50, borderRadius: 5, marginTop: 10, marginLeft: 15 }}
+                            style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
                             <Text>Bridge Race</Text>
@@ -101,7 +106,7 @@ export default function Charts(navigation) {
                             source={{
                                 uri: 'https://imag.malavida.com/mvimgbig/download-fs/paper-fold-31689-0.jpg',
                             }}
-                            style={{ width: 50, height: 50, borderRadius: 5, marginTop: 10, marginLeft: 15 }}
+                            style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
                             <Text>Paper Fold</Text>
@@ -125,7 +130,7 @@ export default function Charts(navigation) {
                             source={{
                                 uri: 'https://apkshelf.com/wp-content/uploads/2021/04/Hair-Challenge-Apk-1200x1200.png',
                             }}
-                            style={{ width: 50, height: 50, borderRadius: 5, marginTop: 10, marginLeft: 15 }}
+                            style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
                             <Text>Hair Challenge</Text>
@@ -149,7 +154,7 @@ export default function Charts(navigation) {
                             source={{
                                 uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxlw39fP-VHNLEdNPkvtKb8n_Q_udMBTa4wjg2Obt3-xTS_sGPlzEsVfw52nZblLH5ZK0&usqp=CAU',
                             }}
-                            style={{ width: 50, height: 50, borderRadius: 5, marginTop: 10, marginLeft: 15 }}
+                            style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
                             <Text>8 Ball Pool</Text>
@@ -173,7 +178,7 @@ export default function Charts(navigation) {
                             source={{
                                 uri: 'https://play-lh.googleusercontent.com/MHNwWG2hfjPiBCvII--geihlEMD_dzUyAld-Z1r4NRj0BnyHFuBEV_V0DtAiBU4j77Y',
                             }}
-                            style={{ width: 50, height: 50, borderRadius: 5, marginTop: 10, marginLeft: 15 }}
+                            style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
                             <Text>Muscle Rush - Smash Running Game</Text>
@@ -196,7 +201,7 @@ export default function Charts(navigation) {
                             source={{
                                 uri: 'https://res09.bignox.com/appcenter/vn/gp-game-image/af8a35106e84ab0e00739004ae54a306',
                             }}
-                            style={{ width: 50, height: 50, borderRadius: 5, marginTop: 10, marginLeft: 15 }}
+                            style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
                             <Text>Delete Puzzle: Erase One Part</Text>
@@ -221,7 +226,7 @@ export default function Charts(navigation) {
                             source={{
                                 uri: 'https://apkplz.net/storage/images/com/drawlifestories/drawingpuzzle/drawinggame/com.drawlifestories.drawingpuzzle.drawinggame_1.png ',
                             }}
-                            style={{ width: 50, height: 50, borderRadius: 5, marginTop: 10, marginLeft: 15 }}
+                            style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
                             <Text>Draw It Story - Dra Life Story</Text>
@@ -254,5 +259,12 @@ const styles = StyleSheet.create({
     viewChu2: {
         marginLeft: 15,
         marginTop: 9
+    },
+    imagegame: {
+        width: windowWidth * 0.15,
+        height: windowWidth * 0.15,
+        borderRadius: 5,
+        marginTop: 10,
+        marginLeft: 15
     }
 })

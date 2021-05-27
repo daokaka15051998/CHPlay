@@ -16,6 +16,12 @@ import Charts from './Charts';
 import { color } from 'react-native-reanimated';
 
 
+import { Dimensions } from 'react-native';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
+
+
 export default function ModalStyle(navigation) {
     const [modalVisible, setModalVisible] = React.useState(false);
 
@@ -187,7 +193,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     modalView: {
-        marginBottom: -370,
+        marginBottom: windowWidth * -0.5,
         width: '100%',
         margin: 20,
         backgroundColor: "white",

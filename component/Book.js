@@ -1,59 +1,67 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TextInput, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TextInput, Image, ScrollView, TouchableOpacity, Button, TouchableNativeFeedback } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { createAppContainer } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import TabViewExample from './TabView';
+import Detail from './Detail';
+
+import { Dimensions } from 'react-native';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
+// const navigation = this.props.navigation;
 
 export default function Book() {
+    <Detail />
 
     return (
+
         <View style={styles.viewSach}>
             <View></View>
             <ScrollView>
-                {/* <View style={styles.viewHeader}>
-                    <Icon name="search" color="black" size={25} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
-                    <TextInput placeholder="Tìm kiếm sách" style={styles.input} />
-                    <Icon name="microphone" color="black" size={25} style={{ marginTop: 10, marginRight: 0, marginBottom: 5 }} />
-                    <Image source={require('../assets/image/daonv1.png')}
-                        style={{ width: 30, height: 30, marginTop: 7, marginLeft: 10 }}
-                    />
-                </View> */}
-
                 <View style={{ backgroundColor: '#BDBDBD', height: 1, width: '100 %' }}></View>
 
                 <View style={styles.viewDX}>
                     <Text style={styles.textDX}>Truyện tranh bán chạy nhất</Text>
-                    <Icon name="angle-right" color="#6E6E6E" size={25} style={{ marginLeft: 130, marginTop: 2 }} />
+                    <Icon name="angle-right" color="#6E6E6E" size={25} style={{ marginLeft: 100, marginTop: 2 }} />
                 </View>
-
-
                 <View style={styles.viewImage}>
                     <ScrollView horizontal={true}>
 
-                        <View style={styles.viewTom}>
-                            <Image
-                                source={{
-                                    uri: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1593740579l/54368780._SX318_.jpg',
-                                }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
-                            />
-                            <View style={styles.viewImage2} >
-                                <View style={styles.viewText}>
-                                    <Text>Người vợ theo hợp đông.Người tình t..</Text>
-                                    <Text>3.9 * 22.000đ</Text>
+                        <TouchableOpacity onPress={() => {
+                            alert('bấm cái đéo giề')
+                            return (
+                                <Detail />
+                            )
+                        }}>
+                            <View style={styles.viewTom}>
+
+                                <Image
+                                    source={{
+                                        uri: 'https://story.vnxyz.me/vnstory/05/e1/05e178b715146209f68be63b984f222c.jpeg',
+                                    }}
+                                    style={styles.imageBook}
+                                />
+
+                                <View style={styles.viewImage2} >
+                                    <View style={styles.viewText}>
+                                        <Text>Người vợ theo hợp đông.Người tình t..</Text>
+                                        <Text>3.9 * 22.000đ</Text>
+                                    </View>
                                 </View>
                             </View>
-                        </View>
+                        </TouchableOpacity>
 
                         <View style={styles.viewTom}>
                             <Image
                                 source={{
                                     uri: 'https://japamanga.com/vn/wp-content/uploads/2015/08/maid-eye4.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -69,7 +77,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://www.romancecomics.com/img/book/comic/hqlc003314_l01.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -84,7 +92,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://m.media-amazon.com/images/I/51dst9DvLpL.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -98,7 +106,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1498881457l/35560742._SX318_.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -112,7 +120,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1581701532l/51260206._SX318_.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -126,7 +134,7 @@ export default function Book() {
 
                 <View style={styles.viewDX}>
                     <Text style={styles.textDX}>Những cuốn sách ly kì và rùng rợn</Text>
-                    <Icon name="angle-right" color="black" size={25} style={{ marginLeft: 50, marginTop: 2 }} />
+                    <Icon name="angle-right" color="black" size={25} style={{ marginLeft: 40, marginTop: 2 }} />
                 </View>
 
 
@@ -138,7 +146,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://images-na.ssl-images-amazon.com/images/I/31c-2D8nZHL._SX331_BO1,204,203,200_.jpg',
                                 }}
-                                style={{ width: 90, height: 140, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -154,7 +162,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/dfa387193_174411.jpg',
                                 }}
-                                style={{ width: 90, height: 140, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -169,7 +177,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781476797502/the-memoirs-of-sherlock-holmes-9781476797502_hr.jpg',
                                 }}
-                                style={{ width: 90, height: 140, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -185,7 +193,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://books.google.com/books/content?id=22BvwCWgViYC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70Tsx8poYXcGDO8D1FLzWO_QtaBWhRysKzqNTglGIHjjf0BSA-ABX0n-A2eS13IdNyCsvmPq4Y-C4Z5V4oWdQZwwNGAFOI1t7bhlmoOegKF4CLEfA2MkGjee6J7XD7hABpPoxej',
                                 }}
-                                style={{ width: 90, height: 140, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -201,7 +209,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://images-na.ssl-images-amazon.com/images/I/81MCKrZ0qoL.jpg',
                                 }}
-                                style={{ width: 90, height: 140, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -216,7 +224,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1593740579l/54368780._SX318_.jpg',
                                 }}
-                                style={{ width: 90, height: 140, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -243,7 +251,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://taisachmoi.com/wp-content/uploads/2018/12/dac-nhan-tam.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -258,7 +266,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://japamanga.com/vn/wp-content/uploads/2015/08/maid-eye4.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -274,7 +282,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://www.romancecomics.com/img/book/comic/hqlc003314_l01.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -289,7 +297,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://m.media-amazon.com/images/I/51dst9DvLpL.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -303,7 +311,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1498881457l/35560742._SX318_.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -317,7 +325,7 @@ export default function Book() {
                                 source={{
                                     uri: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1581701532l/51260206._SX318_.jpg',
                                 }}
-                                style={{ width: 100, height: 150, borderRadius: 5, marginTop: 10 }}
+                                style={styles.imageBook}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
@@ -339,24 +347,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'white'
     },
-    viewHeader: {
-        backgroundColor: 'white',
-        flexDirection: 'row',
-        height: 45,
-        borderRadius: 5,
-        width: '95%',
-        marginLeft: 10,
-        marginTop: 5,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.22,
-        shadowRadius: 2.22,
-
-        elevation: 3,
-    },
     input: {
         width: '70%',
         height: '100%',
@@ -372,13 +362,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         flexDirection: 'row',
     },
-    textHeader: {
-        marginTop: 8,
-        marginRight: 30,
-        fontSize: 17,
-        height: 45,
-        marginLeft: 10
-    },
     viewDX: {
         flexDirection: 'row',
         marginTop: 10
@@ -389,7 +372,8 @@ const styles = StyleSheet.create({
         marginLeft: 10
     },
     viewTom: {
-        width: 110,
+        // width: 110,
+        width: windowWidth * 0.3,
         marginLeft: 10,
         marginTop: 15,
         alignItems: 'center'
@@ -400,5 +384,13 @@ const styles = StyleSheet.create({
     },
     viewText: {
         marginTop: 10,
+    },
+    imageBook: {
+        width: '90%',
+        height: windowWidth * 0.4,
+        marginLeft: 5,
+        borderRadius: 10,
+        marginTop: 10,
+        resizeMode: 'stretch'
     }
 })
