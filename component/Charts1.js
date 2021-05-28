@@ -15,7 +15,7 @@ import { Dimensions } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export default function Charts(navigation) {
+export default function Charts1(navigation) {
     return (
 
         <View style={styles.view1}>
@@ -34,14 +34,14 @@ export default function Charts(navigation) {
                         </View>
                         <Image
                             source={{
-                                uri: 'https://play-lh.googleusercontent.com/TgGhKHzYTMoeoI4E4hby6CB8t_SNT0JYSxBKvccfdxVwFZbI8VDBbrl2SHgNaSH5hTnw',
+                                uri: 'https://cdn.tgdd.vn/2020/11/GameApp/unnamed(1)-180x180.png',
                             }}
                             style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
-                            <Text>CatWalk Beauty</Text>
-                            <Text>Thông thường</Text>
-                            <Text>4,6 * 75MB</Text>
+                            <Text>VssID</Text>
+                            <Text>Doanh nghiệp</Text>
+                            <Text>43,6 * 17MB</Text>
                         </View>
 
                     </View>
@@ -57,14 +57,14 @@ export default function Charts(navigation) {
 
                         <Image
                             source={{
-                                uri: 'https://is4-ssl.mzstatic.com/image/thumb/Purple124/v4/2c/0c/5c/2c0c5cb7-e988-2c66-9849-2f568611ae4a/source/200x200bb.jpg',
+                                uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3lo9gaWJnjcXJFL1Tng_yTpQUOI4j6UaqNeY3SX4XLBn-vhaQ-7AykXNwmTK8O28UpHw&usqp=CAU',
                             }}
                             style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
-                            <Text>Makeover Run</Text>
-                            <Text>Đua xe</Text>
-                            <Text>3,7 * 69MB</Text>
+                            <Text>Bluezone-Phát hiện tiếp xúc</Text>
+                            <Text>Sức khỏe và thể hình</Text>
+                            <Text>4,7 * 34MB</Text>
                         </View>
 
                     </View>
@@ -79,14 +79,14 @@ export default function Charts(navigation) {
 
                         <Image
                             source={{
-                                uri: 'https://www.gamehayapk.com/wp-content/uploads/2021/03/bridge-race.png',
+                                uri: 'https://i.pinimg.com/474x/0d/71/23/0d7123aab181cbf5bec395c8c5be62bd.jpg',
                             }}
                             style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
-                            <Text>Bridge Race</Text>
-                            <Text>Thông thường</Text>
-                            <Text>3,6 * 91MB</Text>
+                            <Text numberOfLines={1}>Zenly-Bản đồ của bạn và những người bạn</Text>
+                            <Text>Xã hội</Text>
+                            <Text>4,0 * 38MB</Text>
                         </View>
 
                     </View>
@@ -104,14 +104,14 @@ export default function Charts(navigation) {
 
                         <Image
                             source={{
-                                uri: 'https://imag.malavida.com/mvimgbig/download-fs/paper-fold-31689-0.jpg',
+                                uri: 'https://cdn.tgdd.vn/GameApp/2/225686/Screentshots/capcut-chinh-sua-video-mien-phi-don-gian-chuyen-nghiep-225686-logo-08-07-2020.png',
                             }}
                             style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
-                            <Text>Paper Fold</Text>
-                            <Text>Thông thường</Text>
-                            <Text>4,6 * 75MB</Text>
+                            <Text>CapCut-chỉnh sửa video</Text>
+                            <Text>Xem và sửa video</Text>
+                            <Text>Cập nhập</Text>
                         </View>
 
                     </View>
@@ -128,14 +128,14 @@ export default function Charts(navigation) {
 
                         <Image
                             source={{
-                                uri: 'https://apkshelf.com/wp-content/uploads/2021/04/Hair-Challenge-Apk-1200x1200.png',
+                                uri: 'https://s16.tiktokcdn.com/musical/resource/mtact/static/images/share_img.png',
                             }}
                             style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
-                            <Text>Hair Challenge</Text>
-                            <Text>Hành động</Text>
-                            <Text>3,6 * 75MB</Text>
+                            <Text>TikTok</Text>
+                            <Text>Xem và sửa video</Text>
+                            <Text>Cập nhập</Text>
                         </View>
 
                     </View>
@@ -152,13 +152,13 @@ export default function Charts(navigation) {
 
                         <Image
                             source={{
-                                uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxlw39fP-VHNLEdNPkvtKb8n_Q_udMBTa4wjg2Obt3-xTS_sGPlzEsVfw52nZblLH5ZK0&usqp=CAU',
+                                uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaQauVR1do94t4Y9-H5zqg5BCSVxUCaq1kBMamb3GfSvkUeF2TIZf6cRYWGLTeXR52y4Q&usqp=CAU',
                             }}
                             style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
-                            <Text>8 Ball Pool</Text>
-                            <Text>Thể Thao . Bi-a . Không cần Internet</Text>
+                            <Text>Shopee: Mua Sắm Online #1</Text>
+                            <Text>Mua sắm</Text>
                             <Text>4,4 * 60MB</Text>
                         </View>
 
@@ -176,13 +176,13 @@ export default function Charts(navigation) {
 
                         <Image
                             source={{
-                                uri: 'https://play-lh.googleusercontent.com/MHNwWG2hfjPiBCvII--geihlEMD_dzUyAld-Z1r4NRj0BnyHFuBEV_V0DtAiBU4j77Y',
+                                uri: 'https://laz-img-cdn.alicdn.com/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png',
                             }}
                             style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
-                            <Text>Muscle Rush - Smash Running Game</Text>
-                            <Text>Thông thường</Text>
+                            <Text>Lazada Mua Gì Cũng Có</Text>
+                            <Text>Mua sắm</Text>
                             <Text>4,1 * 60MB</Text>
                         </View>
 
@@ -199,13 +199,13 @@ export default function Charts(navigation) {
 
                         <Image
                             source={{
-                                uri: 'https://res09.bignox.com/appcenter/vn/gp-game-image/af8a35106e84ab0e00739004ae54a306',
+                                uri: 'https://kinhdoanhzalo.net/wp-content/uploads/2020/01/unnamed.png',
                             }}
                             style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
-                            <Text>Delete Puzzle: Erase One Part</Text>
-                            <Text>Thông thường</Text>
+                            <Text>Zalo-Gọi Video sắc nét</Text>
+                            <Text>Liên lạc</Text>
                             <Text>4,6 * 75MB</Text>
                         </View>
 
@@ -224,14 +224,14 @@ export default function Charts(navigation) {
 
                         <Image
                             source={{
-                                uri: 'https://apkplz.net/storage/images/com/drawlifestories/drawingpuzzle/drawinggame/com.drawlifestories.drawingpuzzle.drawinggame_1.png ',
+                                uri: 'https://play-lh.googleusercontent.com/ldcQMpP7OaVmglCF6kGas9cY_K0PsJzSSosx2saw9KF1m3RHaEXpH_9mwBWaYnkmctk',
                             }}
                             style={styles.imagegame}
                         />
                         <View style={styles.viewChu2}>
-                            <Text>Draw It Story - Dra Life Story</Text>
-                            <Text>Câu đố</Text>
-                            <Text>4,1 * 63MB</Text>
+                            <Text>Messenger-nhắn tin và gọi video</Text>
+                            <Text>Liên lạc</Text>
+                            <Text>7,6 * 63MB</Text>
                         </View>
 
                     </View>

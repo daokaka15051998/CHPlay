@@ -14,46 +14,48 @@ import Movie1 from './Movie1';
 import Book1 from './Book1';
 import Application from './Application';
 
-<Game1 />;
-<Application1 />;
-<Movie1 />;
-<Book1 />;
-
-
 const Tab = createBottomTabNavigator();
 
 export default function App() {
     return (
-        <NavigationContainer>
-            <Tab.Navigator tabBarOptions={{
+        <Tab.Navigator
+            tabBarOptions={{
                 labelStyle: {
                     fontSize: 15,
+                    marginBottom: 5
                 },
                 activeTintColor: 'green',
-                inactiveTintColor: 'black'
+                inactiveTintColor: 'black',
+                style: {
+                    height: 55,
+                }
             }} >
-                <Tab.Screen name="Trò Chơi" component={Game1}
-                    options={{
-                        tabBarIcon: () => < Entypo name="game-controller" size={20} color='#6E6E6E' />
-                    }}
-                />
-                <Tab.Screen name="Ứng Dụng" component={Application1}
-                    options={{
-                        tabBarIcon: () => < AntDesign name="appstore1" size={20} color='#6E6E6E' />
-                    }}
-                />
-                <Tab.Screen name="Phim" component={Movie1}
-                    options={{
-                        tabBarIcon: () => < FontAwesome name="film" size={20} color='#6E6E6E' />
-                    }}
-                />
-                <Tab.Screen name="Sách" component={Book1}
 
-                    options={{
-                        tabBarIcon: () => < AntDesign name="book" size={20} color='#6E6E6E' />
-                    }}
-                />
-            </Tab.Navigator>
-        </NavigationContainer>
+            <Tab.Screen name="Trò Chơi" component={Game1}
+                options={{
+                    tabBarIcon: () =>
+                        < Entypo name="game-controller" size={20} color='#6E6E6E'
+                        />
+                }}
+            />
+
+            <Tab.Screen name="Ứng Dụng" component={Application1}
+                options={{
+                    tabBarIcon: () => < AntDesign name="appstore1" size={20} color='#6E6E6E' />
+                }}
+            />
+            <Tab.Screen name="Phim" component={Movie1}
+                options={{
+                    tabBarIcon: () => < FontAwesome name="film" size={20} color='#6E6E6E' />,
+
+                }}
+            />
+            <Tab.Screen name="Sách" component={Book1}
+
+                options={{
+                    tabBarIcon: () => < AntDesign name="book" size={20} color='#6E6E6E' />
+                }}
+            />
+        </Tab.Navigator>
     );
 }

@@ -28,14 +28,14 @@ export default function Application() {
                         <View style={styles.viewExcel}>
                             <Image
                                 source={{
-                                    uri: 'https://lh3.googleusercontent.com/37EzETO6gZyKmCg2kBIFX1e9gkubxZrVa5fHJ6yOaa7VvEShHjKv2RdtwnZt9Sk258s=w512-h512',
+                                    uri: 'https://play-lh.googleusercontent.com/ikbN8scDWum2l6zGkmBrLFMsxOQvzTZT6UcIAYJ_dxBDAv9Ub7YE640cliaooDiWMzs',
                                 }}
                                 style={styles.viewNgang}
                             />
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Microsoft Excel</Text>
-                                    <Text>Xem,chỉnh sửa & </Text>
+                                    <Text>Money Manager</Text>
+                                    <Text>Quản lí chi tiêu & </Text>
                                     <Text>  65 MB</Text>
                                 </View>
                             </View>
@@ -45,14 +45,14 @@ export default function Application() {
                             <View style={styles.viewShadow}>
                                 <Image
                                     source={{
-                                        uri: 'https://cdn.tgdd.vn/GameApp/3/224785/Screentshots/lingodeer-hoc-tieng-anh-trung-han-nhat-logo-19-06-2020.png',
+                                        uri: 'https://cdn.tgdd.vn/Files/2021/04/22/1345532/line-la-gi-tim-hieu-dac-diem-cua-ung-dung-nhan-ti-9-489x367.jpg',
                                     }}
                                     style={styles.viewNgang}
                                 />
                             </View>
                             <View style={styles.viewImage2} >
                                 <View style={styles.viewText}>
-                                    <Text>Microsoft Word</Text>
+                                    <Text>Gọi và nhắn</Text>
                                     <Text>Viết,chỉnh sửa & </Text>
                                     <Text>  68 MB</Text>
                                 </View>
@@ -427,8 +427,8 @@ const styles = StyleSheet.create({
         marginLeft: 5
     },
     viewApp: {
-        width: windowWidth * 0.25,
-        height: windowWidth * 0.25,
+        width: windowWidth * 0.2,
+        height: windowWidth * 0.2,
         borderRadius: 10,
         marginTop: 15,
         marginLeft: 5,

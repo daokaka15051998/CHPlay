@@ -1,25 +1,30 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, TextInput, Image, ScrollView, TouchableOpacity, Button, TouchableNativeFeedback } from 'react-native';
+import {
+    Text, View, StyleSheet,
+    TextInput, Image, ScrollView, TouchableOpacity,
+    Button, TouchableHighlight
+} from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { createAppContainer } from 'react-navigation';
+import { createAppContainer, navigate, navigation } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import TabViewExample from './TabView';
-import Detail from './Detail';
 
 import { Dimensions } from 'react-native';
+import Detail from './Detail';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+<Detail />
+const Stack = createStackNavigator();
 
-// const navigation = this.props.navigation;
 
-export default function Book() {
-    <Detail />
-
+export default function Book({ }) {
+    const navigation = useNavigation()
+    // chuyển màn hình
     return (
-
         <View style={styles.viewSach}>
             <View></View>
             <ScrollView>
@@ -31,30 +36,20 @@ export default function Book() {
                 </View>
                 <View style={styles.viewImage}>
                     <ScrollView horizontal={true}>
-
-                        <TouchableOpacity onPress={() => {
-                            alert('bấm cái đéo giề')
-                            return (
-                                <Detail />
-                            )
-                        }}>
-                            <View style={styles.viewTom}>
-
-                                <Image
-                                    source={{
-                                        uri: 'https://story.vnxyz.me/vnstory/05/e1/05e178b715146209f68be63b984f222c.jpeg',
-                                    }}
-                                    style={styles.imageBook}
-                                />
-
-                                <View style={styles.viewImage2} >
-                                    <View style={styles.viewText}>
-                                        <Text>Người vợ theo hợp đông.Người tình t..</Text>
-                                        <Text>3.9 * 22.000đ</Text>
-                                    </View>
+                        <View style={styles.viewTom}>
+                            <Image
+                                source={{
+                                    uri: 'https://story.vnxyz.me/vnstory/05/e1/05e178b715146209f68be63b984f222c.jpeg',
+                                }}
+                                style={styles.imageBook}
+                            />
+                            <View style={styles.viewImage2} >
+                                <View style={styles.viewText}>
+                                    <Text>Người vợ theo hợp đông.Người tình t..</Text>
+                                    <Text>3.9 * 22.000đ</Text>
                                 </View>
                             </View>
-                        </TouchableOpacity>
+                        </View>
 
                         <View style={styles.viewTom}>
                             <Image
@@ -337,10 +332,10 @@ export default function Book() {
                     </ScrollView>
                 </View>
             </ScrollView>
-        </View>
+        </View >
     )
-}
 
+}
 
 const styles = StyleSheet.create({
     viewSach: {

@@ -10,15 +10,9 @@ import ViewHeader from './ViewHeader';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { color } from 'react-native-reanimated';
 import Charts from './Charts';
-import Detail from './Detail';
+import Charts2 from './Charts1';
+import Charts1 from './Charts1';
 
-
-// const renderScene = SceneMap({
-//   first: Game,
-//   second: Application,
-//   detail: Movie,
-//   family: Book,
-// });
 
 export default function TabViewExample1() {
 
@@ -29,7 +23,7 @@ export default function TabViewExample1() {
     const [routes] = React.useState([
         { key: 'first', title: 'Cho Bạn' },
         { key: 'second', title: 'Bảng Xếp Hạng' },
-        { key: 'detail', title: 'Có Tính Phí' },
+        { key: 'detail', title: 'Loại' },
         { key: 'family', title: 'Gia Đình' },
         { key: 'bientap', title: 'Lựa Chọn Biên Tập Viên' },
     ]);
@@ -49,26 +43,13 @@ export default function TabViewExample1() {
             getLabelText={({ route }) => route.title}
             renderLabel={({ route, focused, color }) => (
                 <TouchableOpacity>
-                    <Text style={{ color: 'black', flexDirection: 'row-reverse', marginLeft: 25 }}>
+                    <Text style={{ color: focused ? 'green' : 'black', flexDirection: 'row-reverse', marginLeft: 25 }}>
                         {route.title}
                     </Text>
                 </TouchableOpacity>
             )}
         />
     }
-
-    // const renderScene = ({ routes, jumTo, }) => {
-    //   switch (routes.key) {
-    //     case 'first':
-    //       return <Game jumTo={jumTo} />;
-    //     case 'second':
-    //       return <Application jumTo={jumTo} />;
-    //     case 'detail':
-    //       return <Movie jumTo={jumTo} />;
-    //     case 'family':
-    //       return <Book jumTo={jumTo} />;
-    //   }
-    // }
 
     return (
         <View flex={1} back>
@@ -79,7 +60,7 @@ export default function TabViewExample1() {
                 onIndexChange={setIndex}
                 renderScene={SceneMap({
                     first: Application,
-                    second: Charts,
+                    second: Charts1,
                     detail: Movie,
                     family: Book,
                     bientap: Game,

@@ -10,15 +10,7 @@ import ViewHeader from './ViewHeader';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { color } from 'react-native-reanimated';
 import Charts from './Charts';
-import Detail from './Detail';
 
-
-// const renderScene = SceneMap({
-//   first: Game,
-//   second: Application,
-//   detail: Movie,
-//   family: Book,
-// });
 
 export default function TabViewExample() {
 
@@ -37,8 +29,6 @@ export default function TabViewExample() {
   const renderTabBar = (props) => {
     return <TabBar
       {...props}
-      navigationState={{ index, routes }}
-      onIndexChange={setIndex}
       scrollEnabled
       tabStyle={{
         backgroundColor: 'white',
@@ -47,9 +37,9 @@ export default function TabViewExample() {
 
       }}
       getLabelText={({ route }) => route.title}
-      renderLabel={({ route, focused, color }) => (
+      renderLabel={({ route, focused, }) => (
         <TouchableOpacity>
-          <Text style={{ color: 'black', flexDirection: 'row-reverse', marginLeft: 25 }}>
+          <Text style={{ color: focused ? 'green' : 'black', flexDirection: 'row-reverse', marginLeft: 25 }}>
             {route.title}
           </Text>
         </TouchableOpacity>
@@ -57,18 +47,6 @@ export default function TabViewExample() {
     />
   }
 
-  // const renderScene = ({ routes, jumTo, }) => {
-  //   switch (routes.key) {
-  //     case 'first':
-  //       return <Game jumTo={jumTo} />;
-  //     case 'second':
-  //       return <Application jumTo={jumTo} />;
-  //     case 'detail':
-  //       return <Movie jumTo={jumTo} />;
-  //     case 'family':
-  //       return <Book jumTo={jumTo} />;
-  //   }
-  // }
 
   return (
     <View flex={1} back>

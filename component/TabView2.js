@@ -10,15 +10,8 @@ import ViewHeader from './ViewHeader';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { color } from 'react-native-reanimated';
 import Charts from './Charts';
-import Detail from './Detail';
-
-
-// const renderScene = SceneMap({
-//   first: Game,
-//   second: Application,
-//   detail: Movie,
-//   family: Book,
-// });
+import Charts3 from './Charts2';
+import Charts2 from './Charts2';
 
 export default function TabViewExample2() {
 
@@ -28,10 +21,10 @@ export default function TabViewExample2() {
 
     const [routes] = React.useState([
         { key: 'first', title: 'Cho Bạn' },
-        { key: 'second', title: 'Bảng Xếp Hạng' },
-        { key: 'detail', title: 'Có Tính Phí' },
-        { key: 'family', title: 'Gia Đình' },
-        { key: 'bientap', title: 'Lựa Chọn Biên Tập Viên' },
+        { key: 'second', title: 'Bán chạy nhất' },
+        { key: 'detail', title: 'Mới phát hành' },
+        { key: 'family', title: 'Thể loại' },
+        { key: 'bientap', title: 'Hãng phim' },
     ]);
 
     const renderTabBar = (props) => {
@@ -49,7 +42,7 @@ export default function TabViewExample2() {
             getLabelText={({ route }) => route.title}
             renderLabel={({ route, focused, color }) => (
                 <TouchableOpacity>
-                    <Text style={{ color: 'black', flexDirection: 'row-reverse', marginLeft: 25 }}>
+                    <Text style={{ color: focused ? 'green' : 'black', flexDirection: 'row-reverse', marginLeft: 25 }}>
                         {route.title}
                     </Text>
                 </TouchableOpacity>
@@ -57,18 +50,6 @@ export default function TabViewExample2() {
         />
     }
 
-    // const renderScene = ({ routes, jumTo, }) => {
-    //   switch (routes.key) {
-    //     case 'first':
-    //       return <Game jumTo={jumTo} />;
-    //     case 'second':
-    //       return <Application jumTo={jumTo} />;
-    //     case 'detail':
-    //       return <Movie jumTo={jumTo} />;
-    //     case 'family':
-    //       return <Book jumTo={jumTo} />;
-    //   }
-    // }
 
     return (
         <View flex={1} back>
@@ -79,7 +60,7 @@ export default function TabViewExample2() {
                 onIndexChange={setIndex}
                 renderScene={SceneMap({
                     first: Movie,
-                    second: Charts,
+                    second: Charts2,
                     detail: Application,
                     family: Book,
                     bientap: Game,

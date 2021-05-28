@@ -15,7 +15,7 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 
-export default function Detail() {
+export default function Detail2() {
     return (
 
         <View style={styles.container}>
@@ -23,15 +23,15 @@ export default function Detail() {
                 <View style={styles.view1}>
                     <Image
                         source={{
-                            uri: 'https://static.download-vn.com/com.miniclip.eightballpool-thumbnail.png',
+                            uri: 'https://cdn.tgdd.vn/GameApp/3/220297/Screentshots/candy-crush-soda-saga-tro-choi-keo-ngot-logo-19-05-2020.png',
                         }}
                         style={styles.imageGame}
                     />
                     <View style={styles.viewText}>
 
-                        <Text style={{ fontSize: 20 }}>8 Ball Pool</Text>
-                        <Text style={{ fontSize: 14, color: 'green' }}>Miniclip.com</Text>
-                        <Text style={{ fontSize: 13 }}>Chứa quảng cáo</Text>
+                        <Text style={{ fontSize: 20 }}>Candy Crush Jelly</Text>
+                        <Text style={{ fontSize: 20 }}>Saga </Text>
+                        <Text style={{ fontSize: 13, color: 'green' }}>King</Text>
                         <Text style={{ fontSize: 13 }}>Mua hàng trong ứng dụng</Text>
                     </View>
                 </View>
@@ -72,25 +72,25 @@ export default function Detail() {
                     <ScrollView horizontal={true}>
                         <Image
                             source={{
-                                uri: 'https://cdn.tgdd.vn/2020/04/content/Ball8-1-720x450.jpg',
+                                uri: 'https://linkerpt.com/wp-content/uploads/2017/06/games-candy-crush-jelly-saga-v1-44-08-mod-cho-android.png',
                             }}
                             style={styles.imageGame2}
                         />
                         <Image
                             source={{
-                                uri: 'https://cdn.tgdd.vn/GameApp/3/221132/Screentshots/8-ball-pool-tro-choi-bida-dinh-cao-noi-the-hien-ky-nang-cua-ban-01-05-2021-1.png',
+                                uri: 'https://start.vng.com.vn/wp-content/uploads/2021/04/VLTK-1-mobile-cover.png',
                             }}
                             style={styles.imageGame2}
                         />
                         <Image
                             source={{
-                                uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMaFVYi2vEpMmSf6mPeuGKyewDA9BtyJuJsDXA7_wvwyE0EU5NJxJzdiuAsE9VBEcoazw&usqp=CAU',
+                                uri: 'https://img.zing.vn/upload/jx1m/source/News/Mainsite/slide/s2.jpg',
                             }}
                             style={styles.imageGame2}
                         />
                         <Image
                             source={{
-                                uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvTOFdLybJrYngvsV7lCqWDVYTE12MhD4HjA&usqp=CAU',
+                                uri: 'https://znews-photo.zadn.vn/w660/Uploaded/wyhktpu/2020_12_22/image008.jpg',
                             }}
                             style={styles.imageGame2}
                         />
@@ -100,9 +100,9 @@ export default function Detail() {
                     <Text style={{ fontSize: 18 }}>Về trò chơi này</Text>
                     <AntDesign name="arrowright" color="#6E6E6E" size={25} style={{ marginLeft: 150, marginTop: 2 }} />
                 </View>
-                <Text style={{ marginTop: 10, marginLeft: 10 }}>
-                    Chơi game bi-da số 1 thế giới
-            </Text>
+                <Text style={{ marginTop: 10, marginLeft: 10, fontSize: 15 }}>
+                    Võ Lâm Truyền Kỳ 1 Mobie PB Mobie chính Chủ- Kế Thừa 16 năm kinh điển
+                    </Text>
 
                 <View style={styles.viewNgang}>
                     <ScrollView horizontal={true}>
