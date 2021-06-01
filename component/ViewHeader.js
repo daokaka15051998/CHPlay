@@ -14,12 +14,13 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 export default function ViewHeader() {
+
     return (
         <View style={styles.viewHeader}>
             <Icon name="search" color="#6E6E6E" size={20} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
             <TextInput placeholder="Tìm kiếm" style={styles.input} />
             <Feather name="mic" color="#6E6E6E" size={20} style={{ marginTop: 10, marginRight: -5, marginBottom: 5 }} />
-            <Image source={require('../assets/image/daonvtron.png')}
+            <Image source={require('../assets/image/anh.png')}
                 style={styles.viewImage}
             />
         </View>
@@ -44,7 +45,6 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.22,
         shadowRadius: 2.22,
-
         elevation: 3,
     },
     input: {
@@ -60,9 +60,10 @@ const styles = StyleSheet.create({
     viewImage: {
         width: windowWidth * 0.1,
         height: windowWidth * 0.1,
-        marginTop: -3,
+        marginTop: 2,
         marginLeft: 8,
         marginRight: 10,
+        borderRadius: 50,
     }
 })
 

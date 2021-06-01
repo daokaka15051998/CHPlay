@@ -16,7 +16,7 @@ const windowHeight = Dimensions.get('window').height;
 export default function Movie() {
     return (
         <View style={styles.viewPhim}>
-            <ScrollView>
+            <ScrollView contentContainerStyle={{ paddingBottom: 50 }}>
                 <View style={{ backgroundColor: '#BDBDBD', height: 1, width: '100 %' }}></View>
 
                 <View style={styles.viewDX}>

@@ -125,6 +125,35 @@ export default function Detail1() {
                     <AntDesign name="arrowright" color="#6E6E6E" size={25} style={{ marginLeft: 150, marginTop: 2 }} />
                 </View>
 
+                <View style={styles.viewImage}>
+                    <ScrollView horizontal={true}>
+                        <Image
+                            source={{
+                                uri: 'https://cdn.tgdd.vn/Files/2021/04/07/1341407/cach-tai-vo-lam-truyen-ky-1-mobile_800x450.jpg',
+                            }}
+                            style={styles.imageGame2}
+                        />
+                        <Image
+                            source={{
+                                uri: 'https://start.vng.com.vn/wp-content/uploads/2021/04/VLTK-1-mobile-cover.png',
+                            }}
+                            style={styles.imageGame2}
+                        />
+                        <Image
+                            source={{
+                                uri: 'https://img.zing.vn/upload/jx1m/source/News/Mainsite/slide/s2.jpg',
+                            }}
+                            style={styles.imageGame2}
+                        />
+                        <Image
+                            source={{
+                                uri: 'https://znews-photo.zadn.vn/w660/Uploaded/wyhktpu/2020_12_22/image008.jpg',
+                            }}
+                            style={styles.imageGame2}
+                        />
+                    </ScrollView>
+                </View>
+
             </ScrollView>
 
         </View>

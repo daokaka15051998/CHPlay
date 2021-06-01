@@ -27,7 +27,7 @@ export default function Book({ }) {
     return (
         <View style={styles.viewSach}>
             <View></View>
-            <ScrollView>
+            <ScrollView contentContainerStyle={{ paddingBottom: 50 }}>
                 <View style={{ backgroundColor: '#BDBDBD', height: 1, width: '100 %' }}></View>
 
                 <View style={styles.viewDX}>

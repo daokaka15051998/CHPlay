@@ -15,12 +15,12 @@ import { Dimensions } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export default function Charts2(navigation) {
+export default function Charts2() {
     return (
 
         <View style={styles.view1}>
 
-            <ScrollView>
+            <ScrollView contentContainerStyle={{ paddingBottom: 50 }}>
                 <View style={{ marginLeft: 10, alignItems: 'center' }}>
                     <ScrollView horizontal={true}>
                         <ModalStyle />

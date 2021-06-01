@@ -101,7 +101,7 @@ export default function Detail2() {
                     <AntDesign name="arrowright" color="#6E6E6E" size={25} style={{ marginLeft: 150, marginTop: 2 }} />
                 </View>
                 <Text style={{ marginTop: 10, marginLeft: 10, fontSize: 15 }}>
-                    Võ Lâm Truyền Kỳ 1 Mobie PB Mobie chính Chủ- Kế Thừa 16 năm kinh điển
+                    Candy Crush Jelly
                     </Text>
 
                 <View style={styles.viewNgang}>
@@ -124,7 +124,42 @@ export default function Detail2() {
                     <Text style={{ fontSize: 18 }}>Xếp hạng và đánh giá</Text>
                     <AntDesign name="arrowright" color="#6E6E6E" size={25} style={{ marginLeft: 150, marginTop: 2 }} />
                 </View>
+                <View style={styles.viewImage}>
+                    <ScrollView horizontal={true}>
+                        <Image
+                            source={{
+                                uri: 'https://linkerpt.com/wp-content/uploads/2017/06/games-candy-crush-jelly-saga-v1-44-08-mod-cho-android.png',
+                            }}
+                            style={styles.imageGame2}
+                        />
+                        <Image
+                            source={{
+                                uri: 'https://start.vng.com.vn/wp-content/uploads/2021/04/VLTK-1-mobile-cover.png',
+                            }}
+                            style={styles.imageGame2}
+                        />
+                        <Image
+                            source={{
+                                uri: 'https://img.zing.vn/upload/jx1m/source/News/Mainsite/slide/s2.jpg',
+                            }}
+                            style={styles.imageGame2}
+                        />
+                        <Image
+                            source={{
+                                uri: 'https://znews-photo.zadn.vn/w660/Uploaded/wyhktpu/2020_12_22/image008.jpg',
+                            }}
+                            style={styles.imageGame2}
+                        />
+                    </ScrollView>
+                </View>
 
+                <Text style={{ fontSize: 18, marginBottom: 20, marginTop: 10 }}>Xếp hạng và đánh giá</Text>
+                <Image
+                    source={{
+                        uri: 'https://znews-photo.zadn.vn/w660/Uploaded/wyhktpu/2020_12_22/image008.jpg',
+                    }}
+                    style={styles.imageGame2}
+                />
             </ScrollView>
 
         </View>

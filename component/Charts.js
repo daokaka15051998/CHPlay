@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, TextInput, Image, ScrollView, TouchableOpacity } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -15,18 +15,20 @@ import { Dimensions } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export default function Charts(navigation) {
+export default function Charts() {
+
+    const navigation = useNavigation()
     return (
 
         <View style={styles.view1}>
 
-            <ScrollView>
+            <ScrollView contentContainerStyle={{ paddingBottom: 50 }}>
                 <View style={{ marginLeft: 10, alignItems: 'center' }}>
                     <ScrollView horizontal={true}>
                         <ModalStyle />
                     </ScrollView>
                 </View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('DetailGame')}>
                     < View style={styles.view2} >
                         <View style={styles.viewChu}>
                             <Text style={{ marginLeft: 15 }}>1</Text>
@@ -43,11 +45,10 @@ export default function Charts(navigation) {
                             <Text>Thông thường</Text>
                             <Text>4,6 * 75MB</Text>
                         </View>
-
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('DetailGame')}>
                     <View style={styles.view2}>
 
                         <View style={styles.viewChu}>
@@ -69,7 +70,7 @@ export default function Charts(navigation) {
 
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('DetailGame')}>
                     <View style={styles.view2}>
 
                         <View style={styles.viewChu}>
@@ -93,7 +94,7 @@ export default function Charts(navigation) {
 
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('DetailGame')}>
 
                     <View style={styles.view2}>
 
@@ -117,7 +118,7 @@ export default function Charts(navigation) {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('DetailGame')}>
 
                     <View style={styles.view2}>
 
@@ -141,7 +142,7 @@ export default function Charts(navigation) {
                     </View>
 
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('DetailGame')}>
 
                     <View style={styles.view2}>
 
@@ -165,7 +166,7 @@ export default function Charts(navigation) {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('DetailGame')}>
 
                     <View style={styles.view2}>
 
@@ -188,7 +189,7 @@ export default function Charts(navigation) {
 
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('DetailGame')}>
 
                     <View style={styles.view2}>
 
@@ -213,7 +214,7 @@ export default function Charts(navigation) {
 
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('DetailGame')}>
 
                     <View style={styles.view2}>
 

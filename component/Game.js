@@ -19,11 +19,13 @@ export default function Game() {
     return (
 
         <View style={styles.viewTroChoi}>
-            <ScrollView>
+            <ScrollView contentContainerStyle={{ paddingBottom: 50 }}>
                 <View style={{ backgroundColor: '#BDBDBD', height: 1, width: '100 %' }}></View>
                 <View style={styles.viewDX}>
-                    <Text style={styles.textDX}>Khám phá các trò chơi được đề xuất...</Text>
-                    <Icon name="arrow-right" color="#6E6E6E" size={25} style={{ marginLeft: 10, marginTop: 2 }} />
+                    <TouchableOpacity onPress={() => navigation.navigate('SafeView')}>
+                        <Text style={styles.textDX}>Chụp ảnh siêu net full HD</Text>
+                        <Icon name="arrow-right" color="#6E6E6E" size={25} style={{ marginLeft: 10, marginTop: 2 }} />
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.viewImage}>
@@ -197,28 +199,32 @@ export default function Game() {
 
 
                         <View style={styles.viewGame2}>
-                            <Image source={{
-                                uri: 'https://play.2game.vn/static/attachment/game/20210409/1617940996298609.jpg',
-                            }}
-                                style={styles.imageGame2}
-                            />
-                            <View style={styles.viewText}>
-                                <Text>Forsaken Word:Thần Ma Đao</Text>
-                                <Text> 667MB</Text>
-                            </View>
-                        </View>
+                            <TouchableOpacity onPress={() => navigation.navigate('Detail1')}>
+                                <Image source={{
+                                    uri: 'https://play.2game.vn/static/attachment/game/20210409/1617940996298609.jpg',
+                                }}
+                                    style={styles.imageGame2}
+                                />
+                                <View style={styles.viewText}>
+                                    <Text>Forsaken Word:Thần Ma Đao</Text>
+                                    <Text> 667MB</Text>
+                                </View>
 
-                        <View style={styles.viewGame2}>
-                            <Image source={{
-                                uri: 'https://upload.afkmobi.com/photos/afkmobi-com/2021/04/afkmobi_logo_tan_giang_ho_truyen_ky_mobile_ban_hd_chuan.png',
-                            }}
-                                style={styles.imageGame2}
-                            />
-                            <View style={styles.viewText}>
-                                <Text>Võ Lâm Truyền Kỳ 1 Mobie</Text>
-                                <Text> 311MB</Text>
-                            </View>
+                            </TouchableOpacity>
                         </View>
+                        <TouchableOpacity onPress={() => navigation.navigate('Detail1')}>
+                            <View style={styles.viewGame2}>
+                                <Image source={{
+                                    uri: 'https://upload.afkmobi.com/photos/afkmobi-com/2021/04/afkmobi_logo_tan_giang_ho_truyen_ky_mobile_ban_hd_chuan.png',
+                                }}
+                                    style={styles.imageGame2}
+                                />
+                                <View style={styles.viewText}>
+                                    <Text>Võ Lâm Truyền Kỳ 1 Mobie</Text>
+                                    <Text> 311MB</Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
 
 
                         <View style={styles.viewGame2}>

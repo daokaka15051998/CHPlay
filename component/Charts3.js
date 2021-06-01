@@ -21,7 +21,7 @@ export default function Charts3(navigation) {
 
         <View style={styles.view1}>
 
-            <ScrollView>
+            <ScrollView contentContainerStyle={{ paddingBottom: 50 }}>
                 <View style={{ marginLeft: 10, alignItems: 'center' }}>
                     <ScrollView horizontal={true}>
                         <ModalStyle />
