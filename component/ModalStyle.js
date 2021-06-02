@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, TextInput, Image, ScrollView, TouchableOpacity, Modal, Pressable, Button } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -22,7 +22,8 @@ const windowHeight = Dimensions.get('window').height;
 
 
 
-export default function ModalStyle(navigation) {
+export default function ModalStyle() {
+    const navigation = useNavigation()
     const [modalVisible, setModalVisible] = React.useState(false);
 
     const [modalVisible1, setModalVisible1] = React.useState(false);
@@ -45,11 +46,9 @@ export default function ModalStyle(navigation) {
                             style={[styles.button, styles.buttonClose]}
                             onPress={() => setModalVisible(!modalVisible)}
                         >
-                            <Text style={styles.textStyle}>Miễn phí phổ biến nhất</Text>
-                            <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                            <Text style={styles.textStyle1}>Đạt doanh thu cao nhất</Text>
-                            <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-                            <Text style={styles.textStyle1}>Trả phí phổ biến nhất</Text>
+                            <Text style={styles.textStylee}>Miễn phí phổ biến nhất</Text>
+                            <Text style={styles.textStylee1}>Đạt doanh thu cao nhất</Text>
+                            <Text style={styles.textStylee1}>Trả phí phổ biến nhất</Text>
                         </Pressable>
                     </View>
                 </View>
@@ -66,21 +65,25 @@ export default function ModalStyle(navigation) {
             >
                 <View style={styles.centeredView1}>
                     <View style={styles.modalView1}>
-
-                        <Text style={styles.modalText}>Danh mục</Text>
+                        <View style={{ flexDirection: 'row', }}>
+                            <TouchableOpacity onPress={() => setModalVisible1(!modalVisible1)} >
+                                <Icon name="close" color="#6E6E6E" size={20} style={{ marginTop: 9, marginLeft: 10, marginBottom: 5 }} />
+                            </TouchableOpacity>
+                            <Text style={styles.modalText}>Danh mục</Text>
+                        </View>
 
                         <Pressable
                             style={[styles.button, styles.buttonClose]}
-                            onPress={() => setModalVisible1(!modalVisible1)}
                         >
                             <ScrollView>
                                 <Text style={styles.textStyle}>Tất cả các danh mục</Text>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
-
-                                <View style={styles.viewDM}>
-                                    <AntDesign name="CodeSandbox" color="green" size={20} style={styles.iconDm} />
-                                    <Text style={styles.textStyle}>Câu đố</Text>
-                                </View>
+                                <TouchableOpacity>
+                                    <View style={styles.viewDM}>
+                                        <AntDesign name="CodeSandbox" color="green" size={20} style={styles.iconDm} />
+                                        <Text style={styles.textStyle}>Câu đố</Text>
+                                    </View>
+                                </TouchableOpacity>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
                                 <View style={styles.viewDM}>
                                     <Entypo name="dropbox" color="green" size={20} style={styles.iconDm} />
@@ -125,6 +128,16 @@ export default function ModalStyle(navigation) {
                                 <View style={styles.viewDM}>
                                     <Entypo name="music" color="green" size={20} style={styles.iconDm} />
                                     <Text style={styles.textStyle}>Thẻ bài</Text>
+                                </View>
+                                <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
+                                <View style={styles.viewDM}>
+                                    <MaterialIcons name="sports-soccer" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Thể thao</Text>
+                                </View>
+                                <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
+                                <View style={styles.viewDM}>
+                                    <MaterialIcons name="sports-soccer" color="green" size={20} style={styles.iconDm} />
+                                    <Text style={styles.textStyle}>Thể thao</Text>
                                 </View>
                                 <View style={{ marginTop: 15, width: '100%', backgroundColor: 'black', height: 1 }}></View>
                                 <View style={styles.viewDM}>
@@ -207,7 +220,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 1,
         shadowRadius: 4,
-        elevation: 5
+        elevation: 5,
     },
     modalView1: {
         width: '100%',
@@ -236,7 +249,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         marginBottom: 7,
         alignItems: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
     },
     buttonClose: {
         backgroundColor: "white",
@@ -250,19 +263,48 @@ const styles = StyleSheet.create({
         color: "#6E6E6E",
         fontSize: 20,
         marginTop: 13,
-
-
     },
     textStyle1: {
         color: '#6E6E6E',
         fontSize: 20,
-        marginTop: 20
+        marginTop: 20,
     },
     textStyle2: {
         color: "#6E6E6E",
         fontSize: 15,
         marginTop: 0,
         alignItems: 'center',
+    },
+    textStylee: {
+        color: "#6E6E6E",
+        fontSize: 20,
+        marginTop: 13,
+        borderTopWidth: 0.5,
+        borderBottomWidth: 0.5,
+        borderLeftWidth: 0.5,
+        borderRightWidth: 0.5,
+        height: 40
+    },
+    textStylee1: {
+        color: '#6E6E6E',
+        fontSize: 20,
+        marginTop: 20,
+        borderTopWidth: 0.5,
+        borderBottomWidth: 0.5,
+        borderLeftWidth: 0.5,
+        borderRightWidth: 0.5,
+        height: 40
+    },
+    textStylee2: {
+        color: "#6E6E6E",
+        fontSize: 15,
+        marginTop: 0,
+        alignItems: 'center',
+        borderTopWidth: 0.5,
+        borderBottomWidth: 0.5,
+        borderLeftWidth: 0.5,
+        borderRightWidth: 0.5,
+        height: 40
     },
     textStyle3: {
         color: "#6E6E6E",
@@ -274,6 +316,8 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         fontSize: 22,
         marginRight: 95,
+        marginLeft: 40,
+
 
     },
     viewNgang: {

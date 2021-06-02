@@ -19,6 +19,8 @@ import { enableScreens } from 'react-native-screens';
 import DetailGame from './component/ChartsDetail/DetailGame';
 import Camera from './component/Camera/Camera';
 import SafeView from './component/Camera/SafeView';
+import ModalStyle from './component/ModalStyle';
+import Charts from './component/Charts';
 
 
 const Stack = createStackNavigator();
@@ -62,6 +64,8 @@ const App = () => {
         <Stack.Screen name="DetailGame" component={DetailGame} options={{ title: '' }} />
         <Stack.Screen name="SafeView" component={SafeView} options={{ title: '' }} />
         <Stack.Screen name="Camera" component={Camera} options={{ title: '' }} />
+        <Stack.Screen name="Modal" component={ModalStyle} options={{ title: '' }} />
+        <Stack.Screen name="Chart" component={Charts} options={{ title: '' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,77 +1,210 @@
-import React, { PureComponent } from 'react'; import { Button, SafeAreaView } from 'react-native';
-import { RNCamera } from 'react-native-camera';
-import { TouchableOpacity, Alert, StyleSheet } from 'react-native';
-import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import icon from '../icon';
-import { icons } from 'antd/lib/image/PreviewGroup';
+// Example of Image Picker in React Native
+// https://aboutreact.com/example-of-image-picker-in-react-native/
 
+// Import React
+import React, { useState } from 'react';
+// Import required components
+import {
+    SafeAreaView,
+    StyleSheet,
+    Text,
+    View,
+    TouchableOpacity,
+    Image,
+    Platform,
+    PermissionsAndroid,
+} from 'react-native';
 
-export default class Camera extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            takingPic: false,
-        };
-    }
-    takePicture = async () => {
-        if (this.camera && !this.state.takingPic) {
+// Import Image Picker
+// import ImagePicker from 'react-native-image-picker';
+import {
+    launchCamera,
+    launchImageLibrary
+} from 'react-native-image-picker';
 
-            let options = {
-                quality: 0.85,
-                fixOrientation: true,
-                forceUpOrientation: true,
-            };
+const App = () => {
+    const [filePath, setFilePath] = useState({});
 
-            this.setState({ takingPic: true });
-
+    const requestCameraPermission = async () => {
+        if (Platform.OS === 'android') {
             try {
-                const data = await this.camera.takePictureAsync(options);
-                Alert.alert('Success', JSON.stringify(data));
+                const granted = await PermissionsAndroid.request(
+                    PermissionsAndroid.PERMISSIONS.CAMERA,
+                    {
+                        title: 'Camera Permission',
+                        message: 'App needs camera permission',
+                    },
+                );
+                // If CAMERA Permission is granted
+                return granted === PermissionsAndroid.RESULTS.GRANTED;
             } catch (err) {
-                Alert.alert('Error', 'Failed to take picture: ' + (err.message || err));
-                return;
-            } finally {
-                this.setState({ takingPic: false });
+                console.warn(err);
+                return false;
             }
+        } else return true;
+    };
+
+    const requestExternalWritePermission = async () => {
+        if (Platform.OS === 'android') {
+            try {
+                const granted = await PermissionsAndroid.request(
+                    PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+                    {
+                        title: 'External Storage Write Permission',
+                        message: 'App needs write permission',
+                    },
+                );
+                // If WRITE_EXTERNAL_STORAGE Permission is granted
+                return granted === PermissionsAndroid.RESULTS.GRANTED;
+            } catch (err) {
+                console.warn(err);
+                alert('Write permission err', err);
+            }
+            return false;
+        } else return true;
+    };
+
+    const captureImage = async (type) => {
+        let options = {
+            mediaType: type,
+            maxWidth: 300,
+            maxHeight: 550,
+            quality: 1,
+            videoQuality: 'low',
+            durationLimit: 30, //Video max duration in seconds
+            saveToPhotos: true,
+        };
+        let isCameraPermitted = await requestCameraPermission();
+        let isStoragePermitted = await requestExternalWritePermission();
+        if (isCameraPermitted && isStoragePermitted) {
+            launchCamera(options, (response) => {
+                console.log('Response = ', response);
+
+                if (response.didCancel) {
+                    alert('User cancelled camera picker');
+                    return;
+                } else if (response.errorCode == 'camera_unavailable') {
+                    alert('Camera not available on device');
+                    return;
+                } else if (response.errorCode == 'permission') {
+                    alert('Permission not satisfied');
+                    return;
+                } else if (response.errorCode == 'others') {
+                    alert(response.errorMessage);
+                    return;
+                }
+
+            });
         }
     };
 
-    render() {
-        return (
+    const chooseFile = (type) => {
+        let options = {
+            mediaType: type,
+            maxWidth: 300,
+            maxHeight: 550,
+            quality: 1,
+        };
+        launchImageLibrary(options, (response) => {
+            console.log('Response = ', response);
 
-            <RNCamera
-                ref={ref => {
-                    this.camera = ref;
-                }}
-                captureAudio={false}
-                style={{ flex: 1 }}
-                type={RNCamera.Constants.Type.back}
-                androidCameraPermissionOptions={{
-                    title: 'Permission to use camera',
-                    message: 'We need your permission to use your camera',
-                    buttonPositive: 'Ok',
-                    buttonNegative: 'Cancel',
-                }}
-                activeOpacity={0.5}
-                style={styles.btnAlignment}
-                onPress={this.takePicture}>
-                <Icon name="camera" color="#6E6E6E" size={50} />
-            </RNCamera>
+            if (response.didCancel) {
+                alert('User cancelled camera picker');
+                return;
+            } else if (response.errorCode == 'camera_unavailable') {
+                alert('Camera not available on device');
+                return;
+            } else if (response.errorCode == 'permission') {
+                alert('Permission not satisfied');
+                return;
+            } else if (response.errorCode == 'others') {
+                alert(response.errorMessage);
+                return;
+            }
 
-            // onPress={() => navigation.navigate('Camera')}
+        });
+    };
 
-        );
-    }
-}
+    return (
+        <SafeAreaView style={{ flex: 1 }}>
+            <Text style={styles.titleText}>
+                Example of Image Picker in React Native
+      </Text>
+            <View style={styles.container}>
+
+                <Image
+                    source={{ uri: filePath.uri }}
+                    style={styles.imageStyle}
+                />
+                <Text style={styles.textStyle}>{filePath.uri}</Text>
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    style={styles.buttonStyle}
+                    onPress={() => captureImage('photo')}>
+                    <Text style={styles.textStyle}>
+                        Launch Camera for Image
+          </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    style={styles.buttonStyle}
+                    onPress={() => captureImage('video')}>
+                    <Text style={styles.textStyle}>
+                        Launch Camera for Video
+                    </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    style={styles.buttonStyle}
+                    onPress={() => chooseFile('photo')}>
+                    <Text style={styles.textStyle}>Choose Image</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    activeOpacity={0.5}
+                    style={styles.buttonStyle}
+                    onPress={() => chooseFile('video')}>
+                    <Text style={styles.textStyle}>Choose Video</Text>
+                </TouchableOpacity>
+
+            </View>
+        </SafeAreaView>
+    );
+};
+
+export default App;
 
 const styles = StyleSheet.create({
-    btnAlignment: {
+    container: {
         flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
+        padding: 10,
+        backgroundColor: '#fff',
         alignItems: 'center',
-        marginBottom: 20,
+    },
+    titleText: {
+        fontSize: 22,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        paddingVertical: 20,
+    },
+    textStyle: {
+        padding: 10,
+        color: 'black',
+        textAlign: 'center',
+    },
+    buttonStyle: {
+        alignItems: 'center',
+        backgroundColor: 'pink',
+        padding: 5,
+        marginVertical: 10,
+        width: 250,
+        borderRadius: 10
+    },
+    imageStyle: {
+        width: 200,
+        height: 200,
+        margin: 5,
     },
 });
-
