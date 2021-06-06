@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "212108269371",
+    "project_id": "chplay-8eae5",
+    "storage_bucket": "chplay-8eae5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212108269371:android:be8e1bf3bb36e4b879091e",
+        "android_client_info": {
+          "package_name": "com.chplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212108269371-k76vg0f57eajue5gma6aov6ftsb2qcrc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaIuM6JDEIY_m3ZHGMpE1VEsCakcbFom4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212108269371-k76vg0f57eajue5gma6aov6ftsb2qcrc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

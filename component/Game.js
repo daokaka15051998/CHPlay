@@ -529,7 +529,6 @@ const styles = StyleSheet.create({
     },
     viewTextQc: {
         flexDirection: 'row',
-        marginTop: 20,
         marginLeft: 10,
     },
     viewGame2: {

@@ -21,36 +21,48 @@ import Camera from './component/Camera/Camera';
 import SafeView from './component/Camera/SafeView';
 import ModalStyle from './component/ModalStyle';
 import Charts from './component/Charts';
-
-
+import messaging from '@react-native-firebase/messaging';
+import firebase from '@react-native-firebase/app';
 const Stack = createStackNavigator();
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
-    </View>
-  );
-}
-
-function DetailsScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-    </View>
-  );
-}
+// messaging().setBackgroundMessageHandler(async remoteMessage => {
+//   console.log('Message handled in the background!', remoteMessage);
+// });
 
 const App = () => {
+
+  // React.useEffect(() => {
+  //   getFcm();
+  // }, []);
+  // const getFcm = async () => {
+  //   let token = await messaging().getToken();
+  //   messaging().onMessage();
+  //   messaging().getInitialNotification();
+  //   console.log('test', token);
+
+  // };
+
+
+  // React.useEffect(() => {
+  //   const unsubscribe = messaging().onMessage(async remoteMessage => {
+  //     Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+  //   });
+
+  //   return unsubscribe;
+  // }, []);
+
+
+  // React.useEffect(() => {
+  //   const unsubscribe = messaging().onMessage(async remoteMessage => {
+  //     Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+  //   });
+
+  //   return unsubscribe;
+  // }, []);
+
   return (
     <NavigationContainer style={{ with: 0 }}>
       <Stack.Navigator headerMode='none'>
-        {/* <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} /> */}
         <Stack.Screen name="BottomTab" component={BottomTab} options={{ title: '' }} />
         <Stack.Screen name="Game1" component={Game1} />
         <Stack.Screen name="Tabview" component={TabViewExample} />
