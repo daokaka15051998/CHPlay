@@ -8,11 +8,16 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { TabView } from 'react-native-tab-view';
 import TabViewExample from './TabView';
 
-export default function Game1() {
-    return (
+export default class Game1 extends React.Component {
+    constructor() {
+        super();
+    }
+    render() {
+        return (
 
-        <TabViewExample />
+            <TabViewExample />
 
-    );
+        );
+    }
 
 }

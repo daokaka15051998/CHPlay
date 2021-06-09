@@ -34,7 +34,7 @@ export default function Game() {
 
 
                         <View style={styles.viewBia}>
-                            <TouchableOpacity onPress={() => navigation.navigate('Detail')}>
+                            <TouchableOpacity onPress={() => navigation.navigate('Detail', { urlCustom: 'https://i.ytimg.com/vi/rPrgrwNARvE/maxresdefault.jpg' })}>
                                 <Image
                                     source={{
                                         uri: 'https://cdn.tgdd.vn/GameApp/3/221132/Screentshots/8-ball-pool-tro-choi-bida-dinh-cao-noi-the-hien-ky-nang-cua-ban-01-05-2021-0.png',
